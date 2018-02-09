@@ -1,7 +1,6 @@
 #!/bin/sh
 i3-msg 'workspace "1: Comms"; append_layout ~/.config/i3/layouts/work-workspace1-comms.json'
 i3-msg 'workspace "1: Comms"; exec gnome-terminal --title="weechat" -e weechat'
-#i3-msg 'workspace "1: Comms"; exec /home/jfm/Tools/mattermost-desktop-3.7.1/mattermost-desktop'
 i3-msg 'workspace "1: Comms"; move workspace to output DP-2-1'
 sleep 2
 

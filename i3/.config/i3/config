@@ -135,14 +135,6 @@ new_window 1pixel
 gaps inner 10
 gaps outer 5
 
-#Gnome Sessions
-#exec --no-startup-id gnome-session
-#exec --no-startup-id /usr/libexec/gsd-sound
-
-#Applets
-#exec --no-startup-id nm-applet
-#exec --no-startup-id pasystray
-
 ###Displaymode
 set $displayMode "Set display mode [w]ork [l]aptop [h]ome"
 mode $displayMode {
@@ -182,8 +174,8 @@ bindsym $mod+Delete mode "$mode_system"
 bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/i3/rofi/config
 
 #Bars
-exec --no-startup-id ~/.config/i3/polybar/polybar.sh
-exec --no-startup-id ~/.config/i3/scripts/applets.sh
+exec --no-startup-id ~/.config/polybar/polybar.sh
 
-#Music
+# System Scripts
+exec --no-startup-id ~/.config/i3/scripts/applets.sh
 exec --no-startup-id ~/.config/i3/scripts/music.sh

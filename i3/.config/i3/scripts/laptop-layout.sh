@@ -21,8 +21,8 @@ i3-msg 'workspace "5: Media"; append_layout ~/.config/i3/layouts/laptop-workspac
 #TODO: Set and execute something for the first terminal
 i3-msg 'workspace "5: Media"; exec gnome-terminal --title="TODO" --profile laptop'
 i3-msg 'workspace "5: Media"; exec gnome-terminal --title="newsbeuter" --profile laptop -e newsbeuter'
-i3-msg 'workspace "5: Media"; exec gnome-terminal --title="music" --profile laptop -e ~/Templates/music.sh'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --title="music" --profile laptop -e ncmpc'
 i3-msg 'workspace "5: Media"; move workspace to output eDP-1'
 
 feh --bg-scale --zoom fill ~/.config/i3/wallpaper/frozen_leafs.jpg
-~/.config/i3/polybar/laptop-polybar.sh
+~/.config/polybar/laptop-polybar.sh
