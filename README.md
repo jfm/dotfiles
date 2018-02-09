@@ -46,4 +46,5 @@ stow -t ~ i3
 stow -t ~ dunst  
 stow -t ~ polybar  
 stow -t ~ rofi  
+stow -t ~ gtk
 ~~~
