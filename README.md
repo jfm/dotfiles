@@ -13,33 +13,25 @@ I have implemented a manual switching mechanism so that I can switch configurati
 * [Gnome Terminal](https://github.com/GNOME/gnome-terminal)
 
 # Themes
-GTK: [Materia-dark](https://github.com/nana-4/materia-theme)  
-Icons: [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)  
+## Master Branch
+### GTK
+[Materia-dark](https://github.com/nana-4/materia-theme)  
 
-Defined in ~/.config/gtk-3.0/settings.ini or by lxappearance application.
+### Icons
+[Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)  
 
-## Colors
+### ZSH Prompt
+[Spaceship](https://github.com/denysdovhan/spaceship-prompt)
+
+### Colors
 Backgrounds: #263238
 
-### Polybar
+#### Polybar
 Focused Foreground: #009688  
 Unfocused Foreground: #BDBDBD  
 Urgent Foreground: #BF360C	
 
-# Other Settings
-## Gnome Terminal
-Padding in the gnome terminals is done by adding:
-~~~
-vte-terminal {
-    padding: 10px;
-}
-~~~
-in ~/.config/gtk-3.0/gtk.css
-
-### Shell
-I use ZSH with the latest Spaceship prompt
-
-# Stow
+# Stow Commands
 I use Gnu Stow to manage my dotfiles. Dotfiles from this repository can be used by issuing:
 ~~~
 stow -t ~ i3  
@@ -47,4 +39,5 @@ stow -t ~ dunst
 stow -t ~ polybar  
 stow -t ~ rofi  
 stow -t ~ gtk
+stow -t ~ zsh
 ~~~
