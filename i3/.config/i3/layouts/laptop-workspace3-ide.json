@@ -1,0 +1,15 @@
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "stacked",
+    "percent": null,
+    "rect": {
+       "height": 480,
+       "width": 670,
+       "x": 944,
+       "y": 310
+    },
+    "type": "floating_con",
+    "nodes": []
+}
+

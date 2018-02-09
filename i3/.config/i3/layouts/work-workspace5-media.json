@@ -1,0 +1,76 @@
+{
+    "layout": "splitv",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+                "height": 410,
+                "width": 654,
+                "x": 0,
+                "y": 0
+            },
+            "name": "jfm@moerks: ~",
+            "percent": 0.5,
+            "swallows": [
+                {
+                    "class": "^Gnome\\-terminal$",
+                    "title": "^tasks$"
+                }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "floating": "auto_off",
+            "layout": "splith",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                        "height": 410,
+                        "width": 654,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "name": "newsbeuter",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "class": "^Gnome\\-terminal$",
+                            "title": "^newsbeuter$"
+                        }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                        "height": 410,
+                        "width": 654,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "name": "ncmpcpp 0.8.1",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "class": "^Gnome\\-terminal$",
+                            "title": "^music$"
+                        }
+                    ],
+                    "type": "con"
+                }
+            ],
+            "percent": 0.5,
+            "type": "con"
+        }
+    ],
+    "percent": 0.5,
+    "type": "con"
+}
