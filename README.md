@@ -40,10 +40,10 @@ in ~/.config/gtk-3.0/gtk.css
 I use ZSH with the latest Spaceship prompt
 
 # Stow
-I use Gnu Stow to manage my dotfiles. Dotfiles from this repository can be used by issuing:  
-´´´
+I use Gnu Stow to manage my dotfiles. Dotfiles from this repository can be used by issuing:
+~~~
 stow -t ~ i3  
 stow -t ~ dunst  
 stow -t ~ polybar  
 stow -t ~ rofi  
-´´´
+~~~
