@@ -31,6 +31,10 @@ Focused Foreground: #009688
 Unfocused Foreground: #BDBDBD  
 Urgent Foreground: #BF360C	
 
+### Weechat
+I'm using the theme script to theme my weechat. 
+I do realize that colors are a little bit off as we only have 256 colors to work with.
+
 # Stow Commands
 I use Gnu Stow to manage my dotfiles. Dotfiles from this repository can be used by issuing:
 ~~~
@@ -40,4 +44,5 @@ stow -t ~ polybar
 stow -t ~ rofi  
 stow -t ~ gtk
 stow -t ~ zsh
+stow -t ~ weechat
 ~~~
