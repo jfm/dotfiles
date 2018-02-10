@@ -169,6 +169,7 @@ mode "$mode_system" {
 }
 bindsym $mod+Delete mode "$mode_system"
 
+bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 
 ### Rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/i3/rofi/config
