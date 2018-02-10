@@ -12,6 +12,10 @@ I have implemented a manual switching mechanism so that I can switch configurati
 * [Dunst](https://github.com/dunst-project/dunst) 
 * [Gnome Terminal](https://github.com/GNOME/gnome-terminal)
 
+## Applications
+* [WeeChat](https://github.com/weechat/weechat)
+* [ncmpc](https://github.com/MusicPlayerDaemon/ncmpc)
+
 # Themes
 ## Master Branch
 ### GTK
@@ -44,5 +48,7 @@ stow -t ~ polybar
 stow -t ~ rofi  
 stow -t ~ gtk
 stow -t ~ zsh
+
 stow -t ~ weechat
+stow -t ~ ncmpc
 ~~~
