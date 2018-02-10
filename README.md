@@ -1,8 +1,8 @@
-# i3 Dotfiles
-This is my configuration of the i3-gaps windows manager.
+# Dotfiles
+These are the configuration files I currently use for my daily driver setup of i3 etc.
 
 # Multimonitor support
-I have implemented a manual switching mechanism so that I can switch configuration depending on I'm at work, at home or just the laptop
+I have implemented a manual switching mechanism so that I can switch configuration if I'm at work, at home or just the laptop
 
 # Components
 * [i3-gaps](https://github.com/Airblader/i3)
