@@ -15,6 +15,7 @@ I have implemented a manual switching mechanism so that I can switch configurati
 ## Applications
 * [WeeChat](https://github.com/weechat/weechat)
 * [ncmpc](https://github.com/MusicPlayerDaemon/ncmpc)
+* [Newsbeuter](https://github.com/akrennmair/newsbeuter)
 
 # Themes
 ## Master Branch
@@ -51,4 +52,5 @@ stow -t ~ zsh
 
 stow -t ~ weechat
 stow -t ~ ncmpc
+stow -t ~ newsbeuter
 ~~~
