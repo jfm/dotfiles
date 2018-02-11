@@ -36,9 +36,15 @@ Focused Foreground: #009688
 Unfocused Foreground: #BDBDBD  
 Urgent Foreground: #BF360C	
 
+#### URxvt
+I've overridden two colors in URxvt to make the theming for some apps look right
+~~~
+URxvt*color1: #009688
+URxvt*color2: #263238
+~~~
+
 ### Weechat
 I'm using the theme script to theme my weechat. 
-I do realize that colors are a little bit off as we only have 256 colors to work with.
 
 # Stow Commands
 I use Gnu Stow to manage my dotfiles. Dotfiles from this repository can be used by issuing:
