@@ -20,7 +20,7 @@ visible-foreground = #009688
 visible-underline = #FF009688
 unfocused-background = #263238
 unfocused-foreground = #BDBDBD
-unfocused-underline= #FFABDBDBD
+unfocused-underline= #FFBDBDBD
 focused-background = #263238
 focused-foreground = #009688
 focused-underline = #FF009688
@@ -75,7 +75,7 @@ underline-size = 3
 underline-color = ${colors.visible-foreground}
 
 background = #263238
-foreground = #00000000
+foreground = #FFFFFF00
 
 font-0 = Roboto:size=14:weight=bold;2
 font-1 = unifont:size=6:heavy:fontformat=truetype;-2

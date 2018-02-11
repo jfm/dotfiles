@@ -1,6 +1,6 @@
 #!/bin/sh
 i3-msg 'workspace "1: Comms"; append_layout ~/.config/i3/layouts/work-workspace1-comms.json'
-i3-msg 'workspace "1: Comms"; exec gnome-terminal --title="weechat" -e weechat'
+i3-msg 'workspace "1: Comms"; exec urxvt -title weechat -e weechat'
 i3-msg 'workspace "1: Comms"; move workspace to output DP-2-1'
 sleep 2
 
@@ -15,19 +15,19 @@ sleep 2
 
 i3-msg 'workspace "4: Work"; append_layout ~/.config/i3/layouts/work-workspace4-work.json'
 i3-msg 'workspace "4: Work"; exec subl'
-i3-msg 'workspace "4: Work"; exec gnome-terminal --title="shell1"'
-i3-msg 'workspace "4: Work"; exec gnome-terminal --title="shell2"'
+i3-msg 'workspace "4: Work"; exec urxvt -title shell1'
+i3-msg 'workspace "4: Work"; exec urxvt -title shell2'
 i3-msg 'workspace "4: Work"; move workspace to output DP-2-2'
 sleep 2
 
 i3-msg 'workspace "5: Media"; append_layout ~/.config/i3/layouts/work-workspace5-media.json'
-i3-msg 'workspace "5: Media"; exec gnome-terminal --title="tasks" --profile laptop'
-i3-msg 'workspace "5: Media"; exec gnome-terminal --title="newsbeuter" --profile laptop -e newsbeuter'
-i3-msg 'workspace "5: Media"; exec gnome-terminal --title="music" --profile laptop -e ncmpc'
+i3-msg 'workspace "5: Media"; exec urxvt -title tasks'
+i3-msg 'workspace "5: Media"; exec urxvt -title newsbeuter -e newsbeuter'
+i3-msg 'workspace "5: Media"; exec urxvt -title music -e ncmpc'
 i3-msg 'workspace "5: Media"; move workspace to output eDP-1'
 sleep 2
 i3-msg 'workspace "6: REST"; append_layout ~/.config/i3/layouts/work-workspace6-rest.json'
-i3-msg 'workspace "6: REST"; exec gnome-terminal --title="http-prompt" --working-directory=/home/jfm/Customers/TDC/ApiTest -e http-prompt'
+i3-msg 'workspace "6: REST"; exec urxvt -title http-prompt -cd /home/jfm/Customers/TDC/ApiTest -e http-prompt'
 i3-msg 'workspace "6: REST"; move workspace to output DP-2-1'
 sleep 2
 

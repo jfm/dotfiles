@@ -15,7 +15,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -172,7 +172,7 @@ bindsym $mod+Delete mode "$mode_system"
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 
 ### Rofi
-bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/i3/rofi/config
+bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/config
 
 #Bars
 exec --no-startup-id ~/.config/polybar/polybar.sh

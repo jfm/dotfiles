@@ -3,10 +3,10 @@ reload-time 60
 browser "w3m %u"
 articlelist-format  "%4i %f %D  %t"
 
-color background          white   black
-color listnormal          white   black
-color listfocus           black  color73   bold
-color listnormal_unread   color73 black
-color listfocus_unread    black color73   bold
-color info                black  color73   bold
-color article             white   black
+color background          white   color2
+color listnormal          white   color2
+color listfocus           color2  color1   bold
+color listnormal_unread   color1  color2
+color listfocus_unread    color2  color1   bold
+color info                color2  color1   bold
+color article             white   color2

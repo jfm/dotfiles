@@ -15,7 +15,7 @@
             "percent": 0.5,
             "swallows": [
                 {
-                    "class": "^Gnome\\-terminal$",
+                    "class": "^URxvt$",
                     "title": "^tasks$"
                 }
             ],
@@ -40,7 +40,7 @@
                     "percent": 0.5,
                     "swallows": [
                         {
-                            "class": "^Gnome\\-terminal$",
+                            "class": "^URxvt$",
                             "title": "^newsbeuter$"
                         }
                     ],
@@ -60,8 +60,8 @@
                     "percent": 0.5,
                     "swallows": [
                         {
-                            "class": "^Gnome\\-terminal$",
-                            "title": "^music$"
+                            "class": "^URxvt$",
+                            "title": "^ncmpc$"
                         }
                     ],
                     "type": "con"

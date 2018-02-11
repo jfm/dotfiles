@@ -39,8 +39,8 @@
                     "percent": 0.5,
                     "swallows": [
                         {
-                            "class": "^Gnome\\-terminal$",
-                            "title": "^shell1$"
+                          "class": "^URxvt$",
+                          "title": "^shell1$"
                         }
                     ],
                     "type": "con"
@@ -59,8 +59,8 @@
                     "percent": 0.5,
                     "swallows": [
                         {
-                            "class": "^Gnome\\-terminal$",
-                            "title": "^shell2$"
+                           "class": "^URxvt$",
+                           "title": "^shell2$"
                         }
                     ],
                     "type": "con"
