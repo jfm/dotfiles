@@ -10,7 +10,7 @@ I have implemented a manual switching mechanism so that I can switch configurati
 * [i3lock-fancy](https://github.com/guimeira/i3lock-fancy-multimonitor)
 * [Rofi](https://github.com/DaveDavenport/rofi)
 * [Dunst](https://github.com/dunst-project/dunst) 
-* [Gnome Terminal](https://github.com/GNOME/gnome-terminal)
+* [URxvt](https://github.com/exg/rxvt-unicode)
 
 ## Applications
 * [WeeChat](https://github.com/weechat/weechat)
@@ -49,6 +49,7 @@ stow -t ~ polybar
 stow -t ~ rofi  
 stow -t ~ gtk
 stow -t ~ zsh
+stow -t ~ urxvt
 
 stow -t ~ weechat
 stow -t ~ ncmpc
