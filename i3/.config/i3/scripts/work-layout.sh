@@ -23,7 +23,7 @@ sleep 2
 i3-msg 'workspace "5: Media"; append_layout ~/.config/i3/layouts/work-workspace5-media.json'
 i3-msg 'workspace "5: Media"; exec urxvt -title tasks'
 i3-msg 'workspace "5: Media"; exec urxvt -title newsbeuter -e newsbeuter'
-i3-msg 'workspace "5: Media"; exec urxvt -title music -e ncmpc'
+i3-msg 'workspace "5: Media"; exec urxvt -title ncmpc -e ncmpc'
 i3-msg 'workspace "5: Media"; move workspace to output eDP-1'
 sleep 2
 i3-msg 'workspace "6: REST"; append_layout ~/.config/i3/layouts/work-workspace6-rest.json'
@@ -32,4 +32,4 @@ i3-msg 'workspace "6: REST"; move workspace to output DP-2-1'
 sleep 2
 
 feh --bg-scale --zoom fill ~/.config/i3/wallpaper/frozen_leafs.jpg
-~/.config/i3/polybar/work-polybar.sh
+~/.config/polybar/work-polybar.sh
