@@ -22,5 +22,5 @@ i3-msg 'workspace "5: Media"; exec urxvt -e newsbeuter'
 i3-msg 'workspace "5: Media"; exec urxvt -e ncmpc'
 i3-msg 'workspace "5: Media"; move workspace to output eDP-1'
 
-feh --bg-scale --zoom fill ~/.config/i3/wallpaper/frozen_leafs.jpg
+feh --bg-scale --zoom fill ~/.config/i3/wallpaper/fedora_simple.jpg
 ~/.config/polybar/laptop-polybar.sh

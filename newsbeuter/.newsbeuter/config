@@ -6,7 +6,7 @@ articlelist-format  "%4i %f %D  %t"
 color background          white   color2
 color listnormal          white   color2
 color listfocus           color2  color1
-color listnormal_unread   color1  color2
+color listnormal_unread   white   color2
 color listfocus_unread    color2  color1
 color info                color2  color1
 color article             white   color2

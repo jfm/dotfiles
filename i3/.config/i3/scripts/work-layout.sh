@@ -31,5 +31,5 @@ i3-msg 'workspace "6: REST"; exec urxvt -title http-prompt -cd /home/jfm/Custome
 i3-msg 'workspace "6: REST"; move workspace to output DP-2-1'
 sleep 2
 
-feh --bg-scale --zoom fill ~/.config/i3/wallpaper/frozen_leafs.jpg
+feh --bg-scale --zoom fill ~/.config/i3/wallpaper/fedora_simple.jpg
 ~/.config/polybar/work-polybar.sh
