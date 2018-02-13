@@ -33,3 +33,7 @@ unsetopt share_history
 
 #Add OC support
 source <(oc completion zsh)
+
+#HOME/END Support
+bindkey "\e[7~" beginning-of-line
+bindkey "\e[8~" end-of-line
