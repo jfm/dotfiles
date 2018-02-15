@@ -1,6 +1,6 @@
 #!/bin/sh
 i3-msg 'workspace "1: Comms"; append_layout ~/.config/i3/layouts/home-workspace1-comms.json'
-i3-msg 'workspace "1: Comms"; exec urxvt -title weechat -e weechat'
+i3-msg 'workspace "1: Comms"; exec gnome-terminal --profile weechat -e weechat'
 i3-msg 'workspace "1: Comms"; move workspace to output DP-2-2'
 
 i3-msg 'workspace "2: Web"; append_layout ~/.config/i3/layouts/home-workspace2-web.json'
