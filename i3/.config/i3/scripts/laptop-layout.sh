@@ -12,14 +12,14 @@ i3-msg 'workspace "3: IDE"; move workspace to output eDP-1'
 
 i3-msg 'workspace "4: Work"; append_layout ~/.config/i3/layouts/laptop-workspace4-work.json'
 i3-msg 'workspace "4: Work"; exec subl'
-i3-msg 'workspace "4: Work"; exec urxvt -title shell1'
-i3-msg 'workspace "4: Work"; exec urxvt -title shell2'
+i3-msg 'workspace "4: Work"; exec gnome-terminal --profile laptop --title=shell1'
+i3-msg 'workspace "4: Work"; exec gnome-terminal --profile laptop --title=shell2'
 i3-msg 'workspace "4: Work"; move workspace to output eDP-1'
 
 i3-msg 'workspace "5: Media"; append_layout ~/.config/i3/layouts/laptop-workspace5-media.json'
-i3-msg 'workspace "5: Media"; exec urxvt -title tasks'
-i3-msg 'workspace "5: Media"; exec urxvt -e newsbeuter'
-i3-msg 'workspace "5: Media"; exec urxvt -e ncmpc'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=tasks'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=newsbeuter -e newsbeuter'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=ncmpc -e ncmpc'
 i3-msg 'workspace "5: Media"; move workspace to output eDP-1'
 
 feh --bg-scale --zoom fill ~/.config/i3/wallpaper/fedora_simple.jpg
