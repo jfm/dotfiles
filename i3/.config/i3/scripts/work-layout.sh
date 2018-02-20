@@ -15,19 +15,19 @@ sleep 2
 
 i3-msg 'workspace "4: Work"; append_layout ~/.config/i3/layouts/work-workspace4-work.json'
 i3-msg 'workspace "4: Work"; exec subl'
-i3-msg 'workspace "4: Work"; exec urxvt -title shell1'
-i3-msg 'workspace "4: Work"; exec urxvt -title shell2'
+i3-msg 'workspace "4: Work"; exec gnome-terminal --profile default --title=shell1'
+i3-msg 'workspace "4: Work"; exec gnome-terminal --profile default --title=shell2'
 i3-msg 'workspace "4: Work"; move workspace to output DP-2-2'
 sleep 2
 
 i3-msg 'workspace "5: Media"; append_layout ~/.config/i3/layouts/work-workspace5-media.json'
-i3-msg 'workspace "5: Media"; exec urxvt -title tasks'
-i3-msg 'workspace "5: Media"; exec urxvt -title newsbeuter -e newsbeuter'
-i3-msg 'workspace "5: Media"; exec urxvt -title ncmpc -e ncmpc'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=tasks'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=newsbeuter -e newsbeuter'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=ncmpc -e ncmpc'
 i3-msg 'workspace "5: Media"; move workspace to output eDP-1'
 sleep 2
 i3-msg 'workspace "6: REST"; append_layout ~/.config/i3/layouts/work-workspace6-rest.json'
-i3-msg 'workspace "6: REST"; exec urxvt -title http-prompt -cd /home/jfm/Customers/TDC/ApiTest -e http-prompt'
+i3-msg 'workspace "6: REST"; exec gnome-terminal --profile default --title=http-prompt -cd /home/jfm/Customers/TDC/ApiTest -e http-prompt'
 i3-msg 'workspace "6: REST"; move workspace to output DP-2-1'
 sleep 2
 

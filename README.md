@@ -10,7 +10,7 @@ I have implemented a manual switching mechanism so that I can switch configurati
 * [i3lock-fancy](https://github.com/guimeira/i3lock-fancy-multimonitor)
 * [Rofi](https://github.com/DaveDavenport/rofi)
 * [Dunst](https://github.com/dunst-project/dunst) 
-* [URxvt](https://github.com/exg/rxvt-unicode)
+* [Gnome Terminal](https://github.com/GNOME/gnome-terminal)
 
 ## Applications
 * [WeeChat](https://github.com/weechat/weechat)
@@ -36,12 +36,8 @@ Focused Foreground: #009688
 Unfocused Foreground: #BDBDBD  
 Urgent Foreground: #BF360C	
 
-#### URxvt
-I've overridden two colors in URxvt to make the theming for some apps look right
-~~~
-URxvt*color1: #009688
-URxvt*color2: #263238
-~~~
+#### Gnome Terminal
+I've overridden some colors in Gnome Terminal to make the theming for some apps look right
 
 ### Weechat
 I'm using the theme script to theme my weechat. 
