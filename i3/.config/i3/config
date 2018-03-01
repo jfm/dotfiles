@@ -15,7 +15,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -77,7 +77,7 @@ bindsym $mod+3 workspace "3: IDE"
 bindsym $mod+4 workspace "4: Work"
 bindsym $mod+5 workspace "5: Media"
 bindsym $mod+6 workspace "6: REST"
-bindsym $mod+7 workspace 7
+bindsym $mod+7 workspace "7: OC"
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10

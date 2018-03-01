@@ -30,6 +30,7 @@ i3-msg 'workspace "6: REST"; append_layout ~/.config/i3/layouts/work-workspace6-
 i3-msg 'workspace "6: REST"; exec gnome-terminal --profile default --title=http-prompt -cd /home/jfm/Customers/TDC/ApiTest -e http-prompt'
 i3-msg 'workspace "6: REST"; move workspace to output DP-2-1'
 sleep 2
+i3-msg 'workspace "7: OC"; move workspace to output DP-2-2'
 
 feh --bg-scale --zoom fill ~/.config/i3/wallpaper/fedora_simple.jpg
 ~/.config/polybar/work-polybar.sh
