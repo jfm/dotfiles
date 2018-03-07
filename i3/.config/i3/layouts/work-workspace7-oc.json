@@ -1,0 +1,76 @@
+{
+    "layout": "splitv",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+                "height": 410,
+                "width": 654,
+                "x": 0,
+                "y": 0
+            },
+            "name": "oc-shell1",
+            "percent": 0.5,
+            "swallows": [
+                {
+                    "class": "^Gnome\\-terminal$",
+                    "title": "^oc-shell1$"
+                }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "floating": "auto_off",
+            "layout": "splith",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                        "height": 410,
+                        "width": 654,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "name": "oc-shell2",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "class": "^Gnome\\-terminal$",
+                            "title": "^oc-shell2$"
+                        }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 1,
+                    "floating": "auto_off",
+                    "geometry": {
+                        "height": 410,
+                        "width": 654,
+                        "x": 0,
+                        "y": 0
+                    },
+                    "name": "oc-shell3",
+                    "percent": 0.5,
+                    "swallows": [
+                        {
+                            "class": "^Gnome\\-terminal$",
+                            "title": "^oc-shell3$"
+                        }
+                    ],
+                    "type": "con"
+                }
+            ],
+            "percent": 0.5,
+            "type": "con"
+        }
+    ],
+    "percent": 0.5,
+    "type": "con"
+}

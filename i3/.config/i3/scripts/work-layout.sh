@@ -23,13 +23,19 @@ sleep 2
 i3-msg 'workspace "5: Media"; append_layout ~/.config/i3/layouts/work-workspace5-media.json'
 i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=tasks'
 i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=newsbeuter -e newsbeuter'
-i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=ncmpc -e ncmpc'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile laptop --title=ncmpc -e ncmpcpp'
 i3-msg 'workspace "5: Media"; move workspace to output eDP-1'
 sleep 2
+
 i3-msg 'workspace "6: REST"; append_layout ~/.config/i3/layouts/work-workspace6-rest.json'
-i3-msg 'workspace "6: REST"; exec gnome-terminal --profile default --title=http-prompt -cd /home/jfm/Customers/TDC/ApiTest -e http-prompt'
+i3-msg 'workspace "6: REST"; exec gnome-terminal --profile default --title=http-prompt --working-directory=/home/jfm/Customers/TDC/ApiTest -e http-prompt'
 i3-msg 'workspace "6: REST"; move workspace to output DP-2-1'
 sleep 2
+
+i3-msg 'workspace "5: Media"; append_layout ~/.config/i3/layouts/work-workspace7-oc.json'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile default --title=oc-shell1'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile default --title=oc-shell2'
+i3-msg 'workspace "5: Media"; exec gnome-terminal --profile default --title=oc-shell3'
 i3-msg 'workspace "7: OC"; move workspace to output DP-2-2'
 
 feh --bg-scale --zoom fill ~/.config/i3/wallpaper/fedora_simple.jpg
