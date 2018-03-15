@@ -1,0 +1,7 @@
+#!/bin/bash
+. ~/.config/i3/env
+
+i3-msg "workspace 2: Web; append_layout ~/.config/i3/layouts/workspace2-web.json"
+i3-msg "workspace 2: Web; exec google-chrome-beta"
+i3-msg "workspace 2: Web; move workspace to output $PRIMARY"
+

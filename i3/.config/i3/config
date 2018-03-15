@@ -94,6 +94,15 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+# WORKSPACE CREATION
+bindsym $mod+Ctrl+1 exec --no-startup-id ~/.config/i3/workspaces/ws01.sh
+bindsym $mod+Ctrl+2 exec --no-startup-id ~/.config/i3/workspaces/ws02.sh
+bindsym $mod+Ctrl+3 exec --no-startup-id ~/.config/i3/workspaces/ws03.sh
+bindsym $mod+Ctrl+4 exec --no-startup-id ~/.config/i3/workspaces/ws04.sh
+bindsym $mod+Ctrl+5 exec --no-startup-id ~/.config/i3/workspaces/ws05.sh
+bindsym $mod+Ctrl+6 exec --no-startup-id ~/.config/i3/workspaces/ws06.sh
+bindsym $mod+Ctrl+7 exec --no-startup-id ~/.config/i3/workspaces/ws07.sh
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -136,7 +145,7 @@ gaps inner 10
 gaps outer 5
 
 ###Displaymode
-set $displayMode "Set display mode [w]ork [l]aptop [h]ome"
+set $displayMode "Set workspace setup [w]ork [l]aptop [h]ome"
 mode $displayMode {
     bindsym w 	exec "~/.config/i3/scripts/work-monitors.sh"; \
     			exec "~/.config/i3/scripts/work-layout.sh"; \
@@ -171,7 +180,7 @@ bindsym $mod+Delete mode "$mode_system"
 
 bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures/'
 
-### Rofi
+### Rofi234
 bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/config
 
 #Bars
