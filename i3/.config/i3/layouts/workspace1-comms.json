@@ -8,13 +8,13 @@
         "x": 0,
         "y": 0
     },
-    "name": "WeeChat 1.9.1",
+    "name": "Chats",
     "percent": 0.5,
     "swallows": [
-        {
-            "class": "^Gnome\\-terminal$",
-            "title": "^weechat$"
-        }
+       {
+        "class": "^Google\\-chrome\\-beta$",
+        "instance": "^google\\-chrome\\-beta$"
+       }
     ],
     "type": "con"
 }
