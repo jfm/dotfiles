@@ -1,5 +1,5 @@
 
-;=====================================================
+  ;=====================================================
 ;
 ;   To learn more about how to configure Polybar
 ;   go to https://github.com/jaagr/polybar
@@ -17,19 +17,19 @@ label-color = #BDBDBD
 
 visible-background = #263238
 visible-foreground = #009688 
-visible-underline = #009688
+visible-underline = #FF009688
 unfocused-background = #263238
 unfocused-foreground = #BDBDBD
-unfocused-underline= #BDBDBD
+unfocused-underline= #FFBDBDBD
 focused-background = #263238
 focused-foreground = #009688
-focused-underline = #009688
+focused-underline = #FF009688
 urgent-background = #263238
 urgent-foreground = #BF360C
-urgent-underline = #BF360C
+urgent-underline = #FFBF360C
 
-[bar/topbar1]
-monitor = eDP-1
+[bar/primary]
+monitor = ${env:PRIMARY}
 width = 100%
 height = 25
 offset-x = 0
@@ -37,21 +37,84 @@ offset-y = 0
 padding-right = 7
 padding-left = 7
 
+underline-size = 3
+underline-color = ${colors.visible-foreground}
+
 background = #263238
 foreground = #FFFFFF00
 
-font-0 = Roboto:size=11:weight=bold;2
+font-0 = Roboto:size=14:weight=bold;2
 font-1 = unifont:size=6:heavy:fontformat=truetype;-2
 font-2 = siji:pixelsize=10;0
 font-3 = FontAwesome:pixelsize=14;0
 
-modules-left = i3
-modules-center = date
-modules-right = 
+modules-left = date
+modules-center = i3
+modules-right = mpd
 
 tray-position = right
 tray-padding = 5
 tray-transparent = false
+
+override-redirect = false
+;wm-restack = i3
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[bar/secondary]
+monitor = ${env:SECONDARY}
+width = 100%
+height = 25
+offset-x = 0
+offset-y = 0
+padding-right = 7
+padding-left = 7
+
+underline-size = 3
+underline-color = ${colors.visible-foreground}
+
+background = #263238
+foreground = #00000000
+
+font-0 = Roboto:size=14:weight=bold;2
+font-1 = unifont:size=6:heavy:fontformat=truetype;-2
+font-2 = siji:pixelsize=10;0
+font-3 = FontAwesome:pixelsize=14;0
+
+modules-left = 
+modules-center = i3
+modules-right = 
+
+override-redirect = false
+;wm-restack = i3
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[bar/laptop]
+monitor = ${env:LAPTOP}
+width = 100%
+height = 25
+offset-x = 0
+offset-y = 0
+padding-right = 7
+padding-left = 7
+
+underline-size = 3
+underline-color = ${colors.visible-foreground}
+
+background = #263238
+foreground = #00000000
+
+font-0 = Roboto:size=14:weight=bold;2
+font-1 = unifont:size=6:heavy:fontformat=truetype;-2
+font-2 = siji:pixelsize=10;0
+font-3 = FontAwesome:pixelsize=14;0
+
+modules-left = 
+modules-center = i3
+modules-right = 
 
 override-redirect = false
 ;wm-restack = i3
@@ -69,35 +132,34 @@ pin-workspaces = true
 
 label-mode-padding = 5
 
-label-indicator-padding = 0
-label-indicator-background = #BBBBBB
-label-indicator-underline = ${colors.focused-underline}
-
 label-visible-foreground = ${colors.visible-foreground}
 label-visible-background = ${colors.visible-background}
-label-visible-underline = ${colors.visible-underline}
 label-visible-padding = 1
 
 label-unfocused-foreground = ${colors.unfocused-foreground}
 label-unfocused-background = ${colors.unfocused-background}
 label-unfocused-underline = ${colors.unfocused-underline}
-label-unfocused-padding = 1
+label-unfocused-margin = 1
+label-unfocused-padding-right = 1
 
 label-focused-foreground = ${colors.focused-foreground}
 label-focused-background = ${colors.focused-background}
 label-focused-underline = ${colors.focused-underline}
-label-focused-padding = 1
+label-focused-margin = 1
+label-focused-padding-right = 1
 
 label-urgent-foreground = ${colors.urgent-foreground}
 label-urgent-background = ${colors.urgent-background}
 label-urgent-underline = ${colors.urgent-underline}
-label-urgent-padding = 1
+label-urgent-margin = 1
+label-urgent-padding-right = 1
 
 [module/date]
 type = internal/date
 interval = 5
 
 label-foreground = ${colors.label-color}
+label-underline = ${colors.label-color} 
 
 date = "%d/%m-%y"
 date-alt = " %d"
@@ -107,17 +169,21 @@ time-alt =  %H:%M
 
 label = %date% %time%
 
-[module/wireless-network]
-type = internal/network
-interface = wlp4s0
+[module/mpd]
+type = internal/mpd
 
-format-connected = <label-connected>
-format-disconnected = <label-disconnected>
-format-packetloss = <animation-packetloss> <label-connected>
+host = 127.0.0.1
+port = 6600
+#password = mysecretpassword
 
-label-connected-foreground = ${colors.label-color}
-label-connected-padding-right = 10
-label-connected = %essid% %downspeed:9%
+; Seconds to sleep between progressbar/song timer sync
+; Default: 1
+interval = 1
 
-label-disconnected-foreground = ${colors.label-color}
-label-disconnected = not connected
+format-online = <label-time>  <label-song>
+label-song = %artist% - %title%
+label-offline = MPD is offline
+
+label-time-foreground = ${colors.label-color}
+label-song-foreground = ${colors.label-color}
+label-offline-foreground = ${colors.label-color}

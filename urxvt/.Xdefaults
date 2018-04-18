@@ -1,22 +1,2 @@
-URxvt.termName: rxvt-unicode-256color
-
-URxvt.background: #263238
-URxvt.foreground: grey80
-
-URxvt.scrollBar: false
-URxvt.internalBorder:  10
-
-URxvt.font: xft:Roboto Mono for Powerline:size=12,\
-			xft:Roboto Mono:size=12,\
-            xft:Noto Color Emoji:Regular:size=8
-
-URxvt.boldFont: xft:Roboto Mono for Powerline:bold:size=12,xft:Roboto Mono:bold:size=12
-URxvt.italicFont: xft:Roboto Mono for Powerline:italic:size=12,xft:Roboto Mono:italic:size=12
-URxvt.bolditalicFont: xft:Roboto Mono for Powerline:bold:italic:size=12, xft:Roboto Mono:bold:italic:size=12
-
-URxvt.letterSpace: -1
-URxvt.antialias: 1
-
-
-URxvt*color1: #009688
-URxvt*color2: #263238
+Xft.dpi: 120
+Xcursor.size: 16

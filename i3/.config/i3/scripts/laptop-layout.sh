@@ -11,5 +11,4 @@ export LDPI_PROFILE="laptop"
 export HDPI_PROFILE="laptop"
 EOM
 
-feh --bg-scale --zoom fill ~/.config/i3/wallpaper/fedora_simple.jpg
 ~/.config/polybar/laptop-polybar.sh

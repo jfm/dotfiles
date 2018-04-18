@@ -78,9 +78,9 @@ bindsym $mod+4 workspace "4: Work"
 bindsym $mod+5 workspace "5: Media"
 bindsym $mod+6 workspace "6: REST"
 bindsym $mod+7 workspace "7: OC"
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+8 workspace "8: Logs"
+bindsym $mod+9 workspace "9: Terminals"
+bindsym $mod+0 workspace "10: Terminals"
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
