@@ -183,9 +183,7 @@ bindsym Print exec scrot '%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f ~/Pictures
 ### Rofi234
 bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/config
 
-#Bars
-exec --no-startup-id ~/.config/polybar/polybar.sh
-
 # System Scripts
+exec --no-startup-id ~/.config/i3/scripts/undock.sh
 exec --no-startup-id ~/.config/i3/scripts/applets.sh
 exec --no-startup-id ~/.config/i3/scripts/music.sh

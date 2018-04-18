@@ -11,4 +11,5 @@ export LDPI_PROFILE="laptop"
 export HDPI_PROFILE="laptop"
 EOM
 
-~/.config/polybar/laptop-polybar.sh
+~/.config/polybar/laptop-polybar.sh &
+

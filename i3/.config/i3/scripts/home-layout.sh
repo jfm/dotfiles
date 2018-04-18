@@ -12,3 +12,4 @@ export HDPI_PROFILE="laptop"
 EOM
 
 ~/.config/polybar/home-polybar.sh
+feh --bg-scale --zoom fill ~/.config/i3/wallpaper/fedora_simple.jpg
