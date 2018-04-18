@@ -12,8 +12,8 @@
     "percent": 0.5,
     "swallows": [
        {
-        "class": "^Google\\-chrome\\-beta$",
-        "instance": "^google\\-chrome\\-beta$"
+        "class": "^Google\\-chrome$",
+        "instance": "^google\\-chrome$"
        }
     ],
     "type": "con"

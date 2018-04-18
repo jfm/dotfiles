@@ -11,12 +11,12 @@
                 "x": 0,
                 "y": 0
             },
-            "name": "oc-shell1",
+            "name": "jfm@moerks: ~",
             "percent": 0.5,
             "swallows": [
                 {
-                    "class": "^Gnome\\-terminal$",
-                    "title": "^oc-shell1$"
+                    "class": "^URxvt$",
+                    "instance": "^tasks$"
                 }
             ],
             "type": "con"
@@ -36,12 +36,12 @@
                         "x": 0,
                         "y": 0
                     },
-                    "name": "oc-shell2",
+                    "name": "newsbeuter",
                     "percent": 0.5,
                     "swallows": [
                         {
-                            "class": "^Gnome\\-terminal$",
-                            "title": "^oc-shell2$"
+                            "class": "^URxvt$",
+                            "instance": "^newsbeuter$"
                         }
                     ],
                     "type": "con"
@@ -56,12 +56,12 @@
                         "x": 0,
                         "y": 0
                     },
-                    "name": "oc-shell3",
+                    "name": "ncmpc",
                     "percent": 0.5,
                     "swallows": [
                         {
-                            "class": "^Gnome\\-terminal$",
-                            "title": "^oc-shell3$"
+                            "class": "^URxvt$",
+                            "title": "^ncmpcpp$"
                         }
                     ],
                     "type": "con"
@@ -73,4 +73,4 @@
     ],
     "percent": 0.5,
     "type": "con"
-}
+}   

@@ -1,21 +1,22 @@
 {
-    "layout": "splith",
+    "layout": "splitv",
     "nodes": [
         {
             "border": "pixel",
             "current_border_width": 1,
             "floating": "auto_off",
             "geometry": {
-                "height": 1164,
-                "width": 1918,
-                "x": 1920,
+                "height": 410,
+                "width": 654,
+                "x": 0,
                 "y": 0
             },
-            "name": "Shell 1",
-            "percent": 0.6,
+            "name": "oc-shell1",
+            "percent": 0.5,
             "swallows": [
                 {
-                    "class": "^Sublime_text$"
+                    "class": "^URxvt$",
+                    "instance": "^oc-shell1$"
                 }
             ],
             "type": "con"
@@ -23,7 +24,7 @@
         {
             "border": "pixel",
             "floating": "auto_off",
-            "layout": "splitv",
+            "layout": "splith",
             "nodes": [
                 {
                     "border": "pixel",
@@ -35,12 +36,12 @@
                         "x": 0,
                         "y": 0
                     },
-                    "name": "jfm@moerks: ~",
+                    "name": "oc-shell2",
                     "percent": 0.5,
                     "swallows": [
                         {
-                          "class": "^Gnome\\-terminal$",
-                          "title": "^shell1$"
+                            "class": "^URxvt$",
+                            "instance": "^oc-shell2$"
                         }
                     ],
                     "type": "con"
@@ -55,18 +56,18 @@
                         "x": 0,
                         "y": 0
                     },
-                    "name": "Shell 2",
+                    "name": "oc-shell3",
                     "percent": 0.5,
                     "swallows": [
                         {
-                           "class": "^Gnome\\-terminal$",
-                           "title": "^shell2$"
+                            "class": "^URxvt$",
+                            "instance": "^oc-shell3$"
                         }
                     ],
                     "type": "con"
                 }
             ],
-            "percent": 0.4,
+            "percent": 0.5,
             "type": "con"
         }
     ],
