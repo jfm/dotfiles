@@ -426,3 +426,4 @@ mode "$mode_gaps_outer" {
 #### Custom Config
 exec --no-startup-id dockd --daemon
 exec --no-startup-id systemctl --user start mopidy
+exec --no-startup-id /home/jfm/.i3/scripts/start_layout.sh

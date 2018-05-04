@@ -2,23 +2,17 @@
 
 if [[ $(iwgetid -r) = *adazio* ]]; 
 then
-  echo "@Work"
   ~/.i3/scripts/work-monitors.sh &
   ~/.i3/scripts/work-layout.sh &
 fi
 if [[ $(iwgetid -r) = *moerks.dk* ]]; 
 then
-  echo "@Home"
   ~/.i3/scripts/home-monitors.sh &
   ~/.i3/scripts/home-layout.sh &
 fi
 
 sleep 1
 . ~/.i3/env
-
-echo $PRIMARY
-echo $SECONDARY
-echo $LAPTOP
 
 sleep 1
 i3-msg "workspace 1:Comms; move workspace to output $SECONDARY"
