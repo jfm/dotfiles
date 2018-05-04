@@ -3,7 +3,7 @@
 #rofi.font: "Roboto 10"
 rofi.lines: 5
 rofi.color-enabled: true
-rofi.color-window: #26C6DA, #26C6DA, #1e2529
-rofi.color-normal: #26C6DA, #424242, #26C6DA
-rofi.color-active: #26C6DA, #424242, #26C6DA
-rofi.color-urgent: #26C6DA, #424242, #26C6DA
+rofi.color-window: #16a085, #16a085, #1e2529
+rofi.color-normal: #16a085, #424242, #16a085
+rofi.color-active: #16a085, #424242, #16a085
+rofi.color-urgent: #16a085, #424242, #16a085
