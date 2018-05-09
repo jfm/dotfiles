@@ -150,6 +150,7 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWDIRTYSTATE="auto"
 GIT_PS1_SHOWCOLORHINTS="auto"
 GIT_PS1_SHOWUNTRACKEDFILES="auto"
+GIT_PS1_STATESEPARATOR=" "
 #source /home/jfm/Repositories/bash-git-prompt/gitprompt.sh
 source /usr/share/git/completion/git-prompt.sh
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
