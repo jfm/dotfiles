@@ -1,8 +1,8 @@
 # Dotfiles
-These are the configuration files I currently use for my daily driver setup of i3 etc.
+These are the configuration files I currently use for my daily driver setup of i3 etc on Manjaro linux.
 
 # Multimonitor support
-I have implemented a manual switching mechanism so that I can switch configuration if I'm at work, at home or just the laptop
+I have implemented a custom couple of scripts to handle screen setup for work, home and just on the laptop. It does not work with docking/undocking yet though
 
 # Components
 * [i3-gaps](https://github.com/Airblader/i3)
@@ -13,7 +13,7 @@ I have implemented a manual switching mechanism so that I can switch configurati
 ## Applications
 * [ncmpcpp](https://github.com/arybczak/ncmpcpp)
 * [NewsBoat](https://github.com/newsboat/newsboat)
-
+* [Sublime Text 3](https://www.sublimetext.com/)
 
 # Stow Commands
 I use Gnu Stow to manage my dotfiles. Dotfiles from this repository can be used by issuing:
