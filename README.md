@@ -22,4 +22,6 @@ stow -t ~ i3
 stow -t ~ rofi  
 stow -t ~ urxvt
 stow -t ~ newsboat
+stow -t ~ sublime
+stow -t ~ bash
 ~~~
