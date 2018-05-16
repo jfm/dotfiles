@@ -155,6 +155,9 @@ GIT_PS1_STATESEPARATOR=" "
 source /usr/share/git/completion/git-prompt.sh
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
+#Disable CapsLock
+setxkbmap -option ctrl:nocaps
+
 #Paths
 export M2_HOME=/home/jfm/Tools/apache-maven
 export PATH=$PATH:$M2_HOME/bin
