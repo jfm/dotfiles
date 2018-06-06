@@ -158,9 +158,14 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 #Disable CapsLock
 setxkbmap -option ctrl:nocaps
 
+#Disable some CTRL for VIM commands
+bind -r '\C-s'
+stty -ixon
+
 #Paths
 export M2_HOME=/home/jfm/Tools/apache-maven
 export PATH=$PATH:$M2_HOME/bin
+export GIT_EDITOR=vim
 
 #Aliases
 alias oc="/home/jfm/Tools/openshift-origin-client/oc"

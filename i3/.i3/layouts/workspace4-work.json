@@ -15,8 +15,8 @@
             "percent": 0.6,
             "swallows": [
                 {
-                    "class": "^Subl3$",
-                    "instance": "^subl3$"
+                    "class": "^URxvt$",
+                    "instance": "^vim$"
                 }
             ],
             "type": "con"
