@@ -158,6 +158,12 @@ PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 #Disable CapsLock
 setxkbmap -option ctrl:nocaps
 
+#Powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+
 #Disable some CTRL for VIM commands
 bind -r '\C-s'
 stty -ixon
