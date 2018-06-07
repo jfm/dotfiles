@@ -25,4 +25,5 @@ stow -t ~ newsboat
 stow -t ~ sublime
 stow -t ~ bash
 stow -t ~ vim
+stow -t ~ powerline
 ~~~

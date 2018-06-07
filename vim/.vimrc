@@ -19,6 +19,10 @@ filetype indent on
 :imap <c-s> <Esc>:w<CR>a
 nnoremap <F7> :tabp<CR>
 nnoremap <F8> :tabn<CR>
+nnoremap <F9> :bp<CR>
+nnoremap <F10> :bn<CR>
 map <C-n> :NERDTreeToggle<CR>
 
 au BufWinEnter * set number
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
