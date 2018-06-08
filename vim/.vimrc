@@ -1,5 +1,7 @@
 syntax on
+filetype indent on
 
+set encoding=utf-8
 set clipboard=unnamed
 set smartindent
 set shiftwidth=2
@@ -8,21 +10,25 @@ set expandtab
 set number
 set autoread
 
-let g:powerline_pycmd="py3"
+"NERDTree
 let NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 
-filetype indent on
+"Airline
+let g:airline#extensions#tabline#enabled = 1
+let g:Powerline_symbols='unicode'
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
 
+"Mappings
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
-nnoremap <F7> :tabp<CR>
-nnoremap <F8> :tabn<CR>
-nnoremap <F9> :bp<CR>
-nnoremap <F10> :bn<CR>
+nnoremap <F7> :bp<CR>
+nnoremap <F8> :bn<CR>
 map <C-n> :NERDTreeToggle<CR>
 
+"AutoCommands
 au BufWinEnter * set number
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null

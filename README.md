@@ -11,9 +11,11 @@ I have implemented a custom couple of scripts to handle screen setup for work, h
 * [URxvt](https://github.com/exg/rxvt-unicode)
 
 ## Applications
-* [ncmpcpp](https://github.com/arybczak/ncmpcpp)
 * [NewsBoat](https://github.com/newsboat/newsboat)
 * [Sublime Text 3](https://www.sublimetext.com/)
+
+# Powerline
+On Arch/Manjaro we need to install the Powerline fonts from the git repository for it to work properly. We might also need to use the urxvt patched package of urxvt.
 
 # Stow Commands
 I use Gnu Stow to manage my dotfiles. Dotfiles from this repository can be used by issuing:
