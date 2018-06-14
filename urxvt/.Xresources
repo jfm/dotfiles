@@ -65,7 +65,7 @@ XTerm*foreground:                 #fdf6e3
 XTerm*reverseVideo:               on
 XTerm*faceName:                   Terminus:size=11:antialias=true
 XTerm*selectToClipboard:          true
-URxvt*font:                       xft:DejaVu Sans Mono for Powerline:size=11
+URxvt*font:                       xft:DejaVu Sans Mono for Powerline:size=11:minspace=False
 ! URxvt.font:                       9x15,xft:TerminessTTFNerdFontMono
 
 ! alternative font settings with 'terminus':
