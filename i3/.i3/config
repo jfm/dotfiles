@@ -343,10 +343,10 @@ bar {
         statusline #F9FAF9
         separator  #454947
 
-#                      border  backgr. text
-        focused_workspace  #002b36 #002b36 #859900
-        active_workspace   #002b36 #002b36 #FDF6E3
-        inactive_workspace #002b36 #002b36 #839496
+#                          border  backgr. text
+        focused_workspace  #b58900 #b58900 #002b36
+        active_workspace   #b58900 #002b36 #b58900
+        inactive_workspace #002b36 #002b36 #fdf6e3
         binding_mode       #002b36 #002b36 #F9FAF9
         urgent_workspace   #002b36 #002b36 #d33682
     }
