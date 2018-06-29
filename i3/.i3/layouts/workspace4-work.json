@@ -15,8 +15,8 @@
             "percent": 0.6,
             "swallows": [
                 {
-                    "class": "^URxvt$",
-                    "instance": "^vim$"
+                    "class": "^Termite$",
+                    "title": "^vim$"
                 }
             ],
             "type": "con"
@@ -40,8 +40,8 @@
                     "percent": 0.5,
                     "swallows": [
                         {
-                          "class": "^URxvt$",
-                          "instance": "^shell1$"
+                          "class": "^Termite$",
+                          "title": "^shell1$"
                         }
                     ],
                     "type": "con"
@@ -60,8 +60,8 @@
                     "percent": 0.5,
                     "swallows": [
                         {
-                           "class": "^URxvt$",
-                           "instance": "^shell2$"
+                           "class": "^Termite$",
+                           "title": "^shell2$"
                         }
                     ],
                     "type": "con"

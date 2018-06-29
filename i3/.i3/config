@@ -21,7 +21,7 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:URWGothic-Book 11
+font xft:Roboto Mono Medium for Powerline 14
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -33,7 +33,6 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # start program launcher
-#bindsym $mod+d exec --no-startup-id dmenu_recency
 bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/config
 
 # launch categorized menu
@@ -146,9 +145,9 @@ set $ws1 1:Comms
 set $ws2 2:Web
 set $ws3 3:IDE
 set $ws4 4:Work
-set $ws5 5:OC
-set $ws6 6:Term 1
-set $ws7 7:Term 2
+set $ws5 5:OC Test
+set $ws6 6:OC Prod
+set $ws7 7:Prod
 set $ws8 8:Media
 
 # switch to workspace
@@ -186,10 +185,10 @@ bindsym $mod+Ctrl+1 exec --no-startup-id ~/.i3/workspaces/ws01.sh
 bindsym $mod+Ctrl+2 exec --no-startup-id ~/.i3/workspaces/ws02.sh
 bindsym $mod+Ctrl+3 exec --no-startup-id ~/.i3/workspaces/ws03.sh
 bindsym $mod+Ctrl+4 exec --no-startup-id ~/.i3/workspaces/ws04.sh
-bindsym $mod+Ctrl+5 exec --no-startup-id ~/.i3/workspaces/ws05.sh
-bindsym $mod+Ctrl+6 exec --no-startup-id ~/.i3/workspaces/ws06.sh
-bindsym $mod+Ctrl+7 exec --no-startup-id ~/.i3/workspaces/ws07.sh
-bindsym $mod+Ctrl+8 exec --no-startup-id ~/.i3/workspaces/ws08.sh
+#bindsym $mod+Ctrl+5 exec --no-startup-id ~/.i3/workspaces/ws05.sh
+#bindsym $mod+Ctrl+6 exec --no-startup-id ~/.i3/workspaces/ws06.sh
+#bindsym $mod+Ctrl+7 exec --no-startup-id ~/.i3/workspaces/ws07.sh
+#bindsym $mod+Ctrl+8 exec --no-startup-id ~/.i3/workspaces/ws08.sh
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -337,7 +336,7 @@ bar {
 
     bindsym button4 nop
     bindsym button5 nop
-    font xft:DejaVu Sans Mono, FontAwesome 16
+    font xft:Roboto Mono Medium for Powerline, FontAwesome 16
     strip_workspace_numbers yes
 
     colors {
