@@ -1,5 +1,10 @@
-theme = "solarized-dark"
 icons = "awesome"
+
+[theme]
+name = "solarized-dark"
+[theme.overrides]
+idle_bg = "#93a1a1"
+idle_fg = "#ffffff"
 
 [[block]]
 block = "memory"
@@ -19,6 +24,11 @@ format = "{1m}"
 [[block]]
 block = "pacman"
 interval = 10
+
+[[block]]
+block = "battery"
+interval = 10
+show = "percentage"
 
 [[block]]
 block = "time"

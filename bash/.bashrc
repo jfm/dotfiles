@@ -176,6 +176,7 @@ export GIT_EDITOR=vim
 #Aliases
 alias oc="/home/jfm/Tools/openshift-origin-client/oc"
 alias code="cd /home/jfm/Customers/TDC/Code/Onboarding"
+alias dotfiles="cd /home/jfm/Repositories/dotfiles"
 alias tdc="cd /home/jfm/Customers/TDC"
 alias prod="ssh -fN sochi"
 alias top="htop"
