@@ -176,7 +176,7 @@ bindsym $mod+Ctrl+4 exec --no-startup-id ~/.i3/workspaces/ws04.sh
 #bindsym $mod+Ctrl+5 exec --no-startup-id ~/.i3/workspaces/ws05.sh
 #bindsym $mod+Ctrl+6 exec --no-startup-id ~/.i3/workspaces/ws06.sh
 #bindsym $mod+Ctrl+7 exec --no-startup-id ~/.i3/workspaces/ws07.sh
-#bindsym $mod+Ctrl+8 exec --no-startup-id ~/.i3/workspaces/ws08.sh
+bindsym $mod+Ctrl+8 exec --no-startup-id ~/.i3/workspaces/ws08.sh
 
 # Open specific applications in floating mode
 for_window [class="Nitrogen"] floating enable sticky enable border normal
