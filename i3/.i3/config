@@ -21,7 +21,7 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:DejaVu Sans Mono for Powerline 16
+font xft:DejaVu Sans Mono for Powerline 14
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -257,17 +257,18 @@ bar {
     status_command /usr/bin/i3status-rs /home/jfm/.config/i3status-rs/config.toml
     position bottom
 
-    font xft:DejaVu Sans Mono for Powerline, FontAwesome 16
+    font xft:DejaVu Sans Mono for Powerline, FontAwesome 14
     strip_workspace_numbers yes
-
+    tray_output primary
+    
     colors {
         background #002b36
         statusline #F9FAF9
         separator  #454947
 
 #                          border  backgr. text
-        focused_workspace  #b58900 #b58900 #002b36
-        active_workspace   #b58900 #002b36 #b58900
+        focused_workspace  #93a1a1 #93a1a1 #fdf6e3
+        active_workspace   #93a1a1 #002b36 #93a1a1
         inactive_workspace #002b36 #002b36 #fdf6e3
         binding_mode       #002b36 #002b36 #F9FAF9
         urgent_workspace   #002b36 #002b36 #d33682
