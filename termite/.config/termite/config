@@ -1,8 +1,8 @@
 [options]
-font = DejaVu Sans Mono for Powerline 10
+font = DejaVu Sans Mono for Powerline 11
+scrollback_lines = 10000
 
 # Solarized dark color scheme
-
 [colors]
 foreground = #839496
 foreground_bold = #eee8d5
