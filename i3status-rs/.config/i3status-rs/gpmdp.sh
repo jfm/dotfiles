@@ -8,7 +8,7 @@ ICON_PAUSE='\uf04c'
 
 if [ $RUNNING_CMD -gt 3 ]
 then
-  if [ $STATUS_CMD == "Playing" ] 
+  if [ $STATUS_CMD == "Playing" ]
   then
     echo -e $ICON_PLAYING $(gpmdp-remote current)
   else
