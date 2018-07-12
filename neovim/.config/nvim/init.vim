@@ -10,12 +10,8 @@ set expandtab
 set number
 set autoread
 set background=dark
+set rtp^=/usr/share/vim/vimfiles/
 colorscheme solarized
-
-"NERDTree
-let NERDTreeShowHidden=1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
 
 "Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -35,7 +31,6 @@ let g:ycm_min_num_of_chars_for_completion=10
 :imap <c-s> <Esc>:w<CR>a
 nnoremap <F7> :bp<CR>
 nnoremap <F8> :bn<CR>
-map <C-n> :NERDTreeToggle<CR>
 
 "AutoCommands
 au BufWinEnter * set number
