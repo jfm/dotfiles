@@ -140,6 +140,7 @@ ex ()
 
 #Bash Completion for OC
 source ~/.oc_completion.sh
+source ~/.alias_completion.sh
 
 #Git Config
 GIT_PROMPT_ONLY_IN_REPO=1
@@ -159,19 +160,22 @@ setxkbmap -option ctrl:nocaps
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
-. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
+. /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
 
 #Disable some CTRL for VIM commands
 bind -r '\C-s'
 stty -ixon
+stty -echoctl
 
 #Paths
 export M2_HOME=/home/jfm/Tools/apache-maven
-export PATH=$PATH:$M2_HOME/bin
+export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/
 export GIT_EDITOR=vim
 
 #Aliases
-alias oc="/home/jfm/Tools/openshift-origin-client/oc"
+#alias oc="/home/jfm/Tools/openshift-origin-client/oc"
+alias ocdev="oc -n onboarding-dev"
+alias octst="oc -n onboarding-test"
 alias code="cd /home/jfm/Customers/TDC/Code/Onboarding"
 alias dotfiles="cd /home/jfm/Repositories/dotfiles"
 alias tdc="cd /home/jfm/Customers/TDC"

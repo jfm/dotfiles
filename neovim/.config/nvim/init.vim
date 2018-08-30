@@ -3,6 +3,7 @@ filetype indent on
 
 set encoding=utf-8
 set clipboard=unnamed
+set clipboard+=unnamedplus
 set smartindent
 set shiftwidth=2
 set tabstop=2

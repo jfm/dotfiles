@@ -4,8 +4,8 @@ ENV_FILE="/home/jfm/.i3/env"
 
 /bin/cat <<EOM >$ENV_FILE
 export LAPTOP="eDP-1"
-export PRIMARY="DP-1-2"
-export SECONDARY="DP-1-3"
+export PRIMARY="DP1-2"
+export SECONDARY="DP1-3"
 
 export LDPI_PROFILE="default"
 export HDPI_PROFILE="laptop"
