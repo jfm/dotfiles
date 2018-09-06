@@ -10,21 +10,22 @@
             "current_border_width": 1,
             "floating": "auto_off",
             "geometry": {
-                "height": 410,
-                "width": 654,
+                "height": 434,
+                "width": 738,
                 "x": 0,
                 "y": 0
             },
-            "name": "newsboat",
+            "name": "Hacker News",
             "percent": 0.5,
             "swallows": [
                 {
-                    "instance": "^kitty$",
-                    "title": "^newsboat$"
+                    "class": "^kitty$",
+                    "title": "^hackernews$"
                 }
             ],
             "type": "con"
         },
+
         {
             "border": "pixel",
             "current_border_width": 1,
@@ -35,16 +36,15 @@
                 "x": 0,
                 "y": 0
             },
-            "name": "jfm@moerks:~",
+            "name": "Reddit",
             "percent": 0.5,
             "swallows": [
                 {
-                    "instance": "^kitty$",
-                    "title": "^weechat$"
+                    "class": "^kitty$",
+                    "title": "^rtv$",
                 }
             ],
             "type": "con"
         }
     ]
 }
-

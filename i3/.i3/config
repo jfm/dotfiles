@@ -27,7 +27,7 @@ font xft:DejaVu Sans Mono for Powerline 14
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -36,7 +36,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/config
 
 # launch categorized menu
-bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.config/rofi/config 
+bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.config/rofi/config
 
 ################################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
@@ -85,7 +85,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # workspace back and forth (with/without active container)
-workspace_auto_back_and_forth no 
+workspace_auto_back_and_forth no
 bindsym $mod+b workspace back_and_forth
 bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_and_forth
 
@@ -129,6 +129,7 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
+set $ws0 0:TimeWaste
 set $ws1 1:Comms
 set $ws2 2:Web
 set $ws3 3:IDE
@@ -149,6 +150,7 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws0
 
 # Move focused container to workspace
 #bindsym $mod+Ctrl+1 move container to workspace $ws1
@@ -171,6 +173,7 @@ bindsym $mod+Shift+6 move container to workspace $ws6; workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7; workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws0; workspace $ws0
 
 # WORKSPACE CREATION
 bindsym $mod+Ctrl+1 exec --no-startup-id ~/.i3/workspaces/ws01.sh
@@ -181,9 +184,12 @@ bindsym $mod+Ctrl+4 exec --no-startup-id ~/.i3/workspaces/ws04.sh
 #bindsym $mod+Ctrl+6 exec --no-startup-id ~/.i3/workspaces/ws06.sh
 #bindsym $mod+Ctrl+7 exec --no-startup-id ~/.i3/workspaces/ws07.sh
 bindsym $mod+Ctrl+9 exec --no-startup-id ~/.i3/workspaces/ws09.sh
+bindsym $mod+Ctrl+0 exec --no-startup-id ~/.i3/workspaces/ws00.sh
 
 # Open specific applications in floating mode
 for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="feh"] floating enable sticky enable border normal
+for_window [class="mpv"] floating enable sticky enable border normal
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -196,23 +202,6 @@ bindsym $mod+l exec --no-startup-id light-locker-command -l
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
-# Set shut down, restart and locking features
-bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
-mode "$mode_system" {
-  bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
-
-# exit system mode: "Enter" or "Escape"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
 
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
@@ -227,7 +216,7 @@ exec --no-startup-id light-locker
 # Change the variable name at the place you want to match the color
 # of your terminal like this:
 # [example]
-# If you want your bar to have the same background color as your 
+# If you want your bar to have the same background color as your
 # terminal background change the line 362 from:
 # background #14191D
 # to:
@@ -261,7 +250,7 @@ bar {
     font xft:DejaVu Sans Mono for Powerline, FontAwesome 14
     strip_workspace_numbers yes
     tray_output primary
-    
+
     colors {
         background #002b36
         statusline #F9FAF9
@@ -285,7 +274,7 @@ client.focused          #556064 #556064 #80FFF9 #FDF6E3
 client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
 client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
 client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-client.placeholder      #000000 #0c0c0c #ffffff #000000 
+client.placeholder      #000000 #0c0c0c #ffffff #000000
 
 client.background       #2B2C2B
 
