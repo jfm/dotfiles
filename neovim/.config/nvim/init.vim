@@ -10,6 +10,7 @@ set tabstop=2
 set expandtab
 set number
 set autoread
+set hidden
 set background=dark
 set rtp^=/usr/share/vim/vimfiles/
 colorscheme solarized
@@ -25,7 +26,7 @@ let g:airline_solarized_bg='dark'
 let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_server_python_interpreter = 'python2'
 let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_min_num_of_chars_for_completion=10
+let g:ycm_min_num_of_chars_for_completion=5
 
 "Mappings
 :nmap <c-s> :w<CR>

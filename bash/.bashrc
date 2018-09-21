@@ -151,6 +151,7 @@ GIT_PS1_SHOWUNTRACKEDFILES="auto"
 GIT_PS1_STATESEPARATOR=" "
 #source /home/jfm/Repositories/bash-git-prompt/gitprompt.sh
 source /usr/share/git/completion/git-prompt.sh
+eval "$(pipenv --completion)"
 PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
 #Disable CapsLock
@@ -182,4 +183,4 @@ alias tdc="cd /home/jfm/Customers/TDC"
 alias prod="ssh -fN sochi"
 alias top="htop"
 alias ssh="TERM=xterm-256color ssh"
-alias vim="nvim"
+alias vim="nvr -s --remote"
