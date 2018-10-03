@@ -27,6 +27,8 @@ let g:ycm_python_binary_path = '/usr/bin/python3'
 let g:ycm_server_python_interpreter = 'python2'
 let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_min_num_of_chars_for_completion=5
+let g:ycm_add_preview_to_completeopt = 1
+set completeopt-=preview
 
 "Mappings
 :nmap <c-s> :w<CR>
@@ -37,3 +39,12 @@ nnoremap <F8> :bn<CR>
 "AutoCommands
 au BufWinEnter * set number
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
