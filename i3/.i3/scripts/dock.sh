@@ -14,7 +14,6 @@ fi
 sleep 1
 . ~/.i3/env
 
-sleep 1
 i3-msg "workspace 1:Comms; move workspace to output $LAPTOP"
 i3-msg "workspace 2:Web; move workspace to output $PRIMARY"
 i3-msg "workspace 3:IDE; move workspace to output $PRIMARY"
