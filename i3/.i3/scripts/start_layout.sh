@@ -10,13 +10,13 @@ then
   . ~/.i3/env
 
   sleep 1
-  polybar primary
-  polybar secondary
-  polybar laptop
+  polybar primary &
+  polybar secondary &
+  polybar laptop &
 else
   ~/.i3/scripts/undock.sh &
   . ~/.i3/env
 
   sleep 1
-  polybar primary
+  polybar primary &
 fi
