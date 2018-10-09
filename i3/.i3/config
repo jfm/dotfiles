@@ -187,6 +187,7 @@ bindsym $mod+Ctrl+9 exec --no-startup-id ~/.i3/workspaces/ws09.sh
 bindsym $mod+Ctrl+0 exec --no-startup-id ~/.i3/workspaces/ws00.sh
 
 # Open specific applications in floating mode
+for_window [class="^.*"] border pixel 3
 for_window [class="Nitrogen"] floating enable sticky enable border normal
 for_window [class="feh"] floating enable sticky enable border normal
 for_window [class="mpv"] floating enable sticky enable border normal
@@ -272,7 +273,7 @@ set_from_resource $term_color15    color15
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-client.focused          #556064 #556064 #80FFF9 #FDF6E3
+client.focused          #556064 #556064 #80FFF9 #FDF6E3 #b58900
 client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
 client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
 client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
