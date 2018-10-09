@@ -38,18 +38,6 @@ bindsym $mod+d exec --no-startup-id rofi -show drun -config ~/.config/rofi/confi
 # launch categorized menu
 bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.config/rofi/config
 
-################################################################################################
-## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
-################################################################################################
-
-exec --no-startup-id volumeicon
-bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
-#exec --no-startup-id pulseaudio
-#exec --no-startup-id pa-applet
-#bindsym $mod+Ctrl+m exec pavucontrol
-
-################################################################################################
-
 # Screen brightness controls
 # bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
 # bindsym XF86MonBrightnessDown exec "xbacklight -dec 10; notify-send 'brightness down'"
@@ -119,16 +107,6 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-#set $ws0 0:IRC
-#set $ws1 1:Comms
-#set $ws2 2:Web
-#set $ws3 3:IDE
-#set $ws4 4:Work
-#set $ws5 5:Terminals
-#set $ws6 6:Terminals
-#set $ws7 7:AltWeb
-#set $ws8 8:Media
-#set $ws9 9:News
 set $ws0 0:
 set $ws1 1:
 set $ws2 2:
@@ -151,17 +129,6 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws0
-
-# Move focused container to workspace
-#bindsym $mod+Ctrl+1 move container to workspace $ws1
-#bindsym $mod+Ctrl+2 move container to workspace $ws2
-#bindsym $mod+Ctrl+3 move container to workspace $ws3
-#bindsym $mod+Ctrl+4 move container to workspace $ws4
-#bindsym $mod+Ctrl+5 move container to workspace $ws5
-#bindsym $mod+Ctrl+6 move container to workspace $ws6
-#bindsym $mod+Ctrl+7 move container to workspace $ws7
-#bindsym $mod+Ctrl+8 move container to workspace $ws8
-#bindsym $mod+Ctrl+9 move container to workspace $ws9
 
 # Move to workspace with focused container
 bindsym $mod+Shift+1 move container to workspace $ws1; workspace $ws1
@@ -203,9 +170,6 @@ bindsym $mod+Shift+r restart
 # Lock screen
 bindsym $mod+l exec --no-startup-id light-locker-command -l
 
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
 exec --no-startup-id nm-applet
@@ -243,33 +207,6 @@ set_from_resource $term_color12    color12
 set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
-
-# Start i3bar to display a workspace bar (plus the system information i3status if available)
-#bar {
-#  i3bar_command i3bar
-#    status_command /usr/bin/i3status-rs /home/jfm/.config/i3status-rs/config.toml
-#    position bottom
-
-#    font xft:DejaVu Sans Mono for Powerline, FontAwesome 14
-#    strip_workspace_numbers yes
-#    tray_output primary
-
-#    colors {
-#        background #002b36
-#        statusline #F9FAF9
-#        separator  #454947
-
-#                          border  backgr. text
-#        focused_workspace  #93a1a1 #93a1a1 #fdf6e3
-#        active_workspace   #93a1a1 #002b36 #93a1a1
-#        inactive_workspace #002b36 #002b36 #fdf6e3
-#        binding_mode       #002b36 #002b36 #F9FAF9
-#        urgent_workspace   #002b36 #002b36 #d33682
-#    }
-#}
-
-# hide/unhide i3status bar
-#bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
