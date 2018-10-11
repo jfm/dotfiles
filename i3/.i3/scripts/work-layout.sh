@@ -11,5 +11,7 @@ export LDPI_PROFILE="default"
 export HDPI_PROFILE="laptop"
 EOM
 
-#~/.config/polybar/work-polybar.sh
-#feh --bg-scale --zoom fill ~/.config/i3/wallpaper/fedora_simple.jpg
+. $ENV_FILE
+polybar primary &
+polybar secondary &
+polybar laptop &

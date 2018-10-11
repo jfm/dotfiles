@@ -241,7 +241,8 @@ label = %date% %time%
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 98
+full-at = 95
+interval = 120
 
 format-charging = <animation-charging> <label-charging>
 
