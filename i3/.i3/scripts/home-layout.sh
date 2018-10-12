@@ -12,5 +12,6 @@ export HDPI_PROFILE="laptop"
 EOM
 
 . $ENV_FILE
+killall polybar &
 polybar primary &
 polybar secondary &

@@ -8,8 +8,10 @@ set $mod Mod4
 #workspace_layout stacking
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window pixel 0
-new_float normal
+new_window none
+#new_window pixel 0
+#new_float normal
+new_float none
 
 # Hide borders
 hide_edge_borders none
@@ -155,10 +157,9 @@ bindsym $mod+Ctrl+0 exec --no-startup-id ~/.i3/workspaces/ws00.sh
 
 # Open specific applications in floating mode
 for_window [class="^.*"] border pixel 0
-for_window [class="Nitrogen"] floating enable sticky enable border normal
-for_window [class="feh"] floating enable sticky enable border normal
-for_window [class="mpv"] floating enable sticky enable border normal
-for_window [class="vlc"] floating enable sticky enable border normal
+for_window [class="Nitrogen"] floating enable sticky enable border none
+for_window [class="feh"] floating enable sticky enable border none
+for_window [class="mpv"] floating enable sticky enable border none
 for_window [class="^jetbrains-.+"][window_type=dialog] focus
 
 # reload the configuration file
@@ -171,12 +172,12 @@ bindsym $mod+Shift+r restart
 bindsym $mod+l exec --no-startup-id light-locker-command -l
 
 # Autostart applications
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b
+exec --no-startup-id compton --config /home/jfm/.config/compton/compton.conf
+exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 #exec --no-startup-id blueman-applet
 exec --no-startup-id light-locker
-exec --no-startup-id compton --config /home/jfm/.config/compton/compton.conf
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
