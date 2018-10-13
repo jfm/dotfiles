@@ -46,9 +46,9 @@ bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.config/rofi/c
 
 # Start Applications
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
-bindsym Print exec --no-startup-id i3-scrot
-bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
-bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
+bindsym Print exec --no-startup-id scrot '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
+bindsym $mod+Print --release exec --no-startup-id scrot -u '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
+bindsym $mod+Shift+Print --release exec --no-startup-id scrot -s '%Y-%m-%d_$wx$h_scrot.png' -e 'mv $f ~/Pictures/screenshots/'
 
 # focus_follows_mouse no
 

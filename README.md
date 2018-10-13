@@ -7,6 +7,9 @@ I have implemented a custom couple of scripts to handle screen setup for work, h
 # Desktop
 I use a custom configured desktop without a normal DE. I prefer the simplicity and control I can get by choosing my own components
 
+## Screenshot
+![Screenshot](screenshot.png)
+
 ## Components
 * [i3-gaps](https://github.com/Airblader/i3)
 * [Rofi](https://github.com/DaveDavenport/rofi)
