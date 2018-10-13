@@ -32,7 +32,11 @@ I use a custom configured desktop without a normal DE. I prefer the simplicity a
 ### Looks
 #### Themes
 Icon Theme: Papirus Dark
+
 GTK Theme: Materia Dark
+
+#### Colorscheme
+I aim to use the nice Solarized Dark colorscheme as much as possible because I just find it very pleasing to the eyes.
 
 #### Fonts
 I try to use the excellent Source Code Pro for Powerline font everywhere. On Arch we need to install the Powerline fonts from the git repository for it to work properly.
