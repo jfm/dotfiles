@@ -13,4 +13,6 @@ EOM
 
 . $ENV_FILE
 killall polybar &
+sleep 1
 polybar primary &
+nitrogen --restore &

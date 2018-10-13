@@ -1,16 +1,14 @@
 #!/bin/bash
 
-xrandr --output DP1-2 --auto
-xrandr --output DP1-3 --auto
-
 if [[ $(iwgetid -r) = *adazio* ]];
 then
  ~/.i3/scripts/work-monitors.sh &
-  ~/.i3/scripts/work-layout.sh &
+ ~/.i3/scripts/work-layout.sh &
 fi
 if [[ $(iwgetid -r) = *moerks.dk* ]];
 then
   ~/.i3/scripts/home-monitors.sh &
+  sleep 5
   ~/.i3/scripts/home-layout.sh &
 fi
 

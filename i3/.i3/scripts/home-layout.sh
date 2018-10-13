@@ -12,6 +12,9 @@ export HDPI_PROFILE="laptop"
 EOM
 
 . $ENV_FILE
+
 killall polybar &
+sleep 1
 polybar primary &
 polybar secondary &
+nitrogen --restore &

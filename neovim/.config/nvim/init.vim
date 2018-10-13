@@ -15,6 +15,12 @@ set background=dark
 set rtp^=/usr/share/vim/vimfiles/
 colorscheme solarized
 
+"Plugins
+call plug#begin('~/.local/share/nvim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'davidhalter/jedi-vim'
+call plug#end()
+
 "Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:Powerline_symbols='unicode'
@@ -22,13 +28,9 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
-"YCM
-let g:ycm_python_binary_path = '/usr/bin/python3'
-let g:ycm_server_python_interpreter = 'python2'
-let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_min_num_of_chars_for_completion=5
-let g:ycm_add_preview_to_completeopt = 1
-set completeopt-=preview
+"Jedi
+let g:jedi#use_splits_not_buffers = "bottom"
+let g:jedi#show_call_signatures = "1"
 
 "Mappings
 :nmap <c-s> :w<CR>
@@ -39,12 +41,3 @@ nnoremap <F8> :bn<CR>
 "AutoCommands
 au BufWinEnter * set number
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
-
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix

@@ -173,7 +173,7 @@ bindsym $mod+l exec --no-startup-id light-locker-command -l
 
 # Autostart applications
 exec --no-startup-id compton --config /home/jfm/.config/compton/compton.conf
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
 #exec --no-startup-id blueman-applet

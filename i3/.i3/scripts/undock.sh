@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ~/.i3/scripts/laptop-monitors.sh &
+sleep 3
 ~/.i3/scripts/laptop-layout.sh &
 
 sleep 1
@@ -9,8 +10,6 @@ sleep 1
 echo $PRIMARY
 echo $SECONDARY
 echo $LAPTOP
-
-
 
 i3-msg "workspace 1:; move workspace to output $LAPTOP"
 i3-msg "workspace 2:; move workspace to output $LAPTOP"
