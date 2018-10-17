@@ -41,3 +41,4 @@ nnoremap <F8> :bn<CR>
 "AutoCommands
 au BufWinEnter * set number
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+autocmd FileType python setlocal completeopt-=preview
