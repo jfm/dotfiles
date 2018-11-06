@@ -1,0 +1,15 @@
+
+# rofi.location: 1
+rofi.font: Source Code Pro for Powerline 10
+rofi.lines: 10
+rofi.color-enabled: true
+rofi.bw: 5
+#rofi.color-window: #16a085, #16a085, #1e2529
+#rofi.color-normal: #16a085, #424242, #16a085
+#rofi.color-active: #16a085, #424242, #16a085
+#rofi.color-urgent: #16a085, #424242, #16a085
+
+rofi.color-window: #002b36, #073642, #073642
+rofi.color-normal: #002b36, #fdf6e3, #002b36, #b58900, #002b36
+rofi.color-active: #002b36, #fdf6e3, #002b36, #b58900, #002b36
+rofi.color-urgent: #002b36, #fdf6e3, #002b36, #b58900, #002b36

@@ -1,13 +1,13 @@
 #!/bin/sh
 
-ENV_FILE="/home/jfm/.i3/env"
+ENV_FILE="/home/jfm/.config/i3/env"
 
 /bin/cat <<EOM >$ENV_FILE
 export LAPTOP="eDP1"
-export PRIMARY="DP1-2"
-export SECONDARY="DP1-3"
+export PRIMARY="eDP1"
+export SECONDARY="eDP1"
 
-export LDPI_PROFILE="default"
+export LDPI_PROFILE="laptop"
 export HDPI_PROFILE="laptop"
 EOM
 
@@ -15,6 +15,4 @@ EOM
 killall polybar &
 sleep 1
 polybar primary &
-polybar secondary &
-polybar laptop &
 nitrogen --restore &

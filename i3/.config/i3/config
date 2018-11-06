@@ -145,15 +145,15 @@ bindsym $mod+Shift+9 move container to workspace $ws9; workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws0; workspace $ws0
 
 # WORKSPACE CREATION
-bindsym $mod+Ctrl+1 exec --no-startup-id ~/.i3/workspaces/ws01.sh
-bindsym $mod+Ctrl+2 exec --no-startup-id ~/.i3/workspaces/ws02.sh
-bindsym $mod+Ctrl+3 exec --no-startup-id ~/.i3/workspaces/ws03.sh
-bindsym $mod+Ctrl+4 exec --no-startup-id ~/.i3/workspaces/ws04.sh
-#bindsym $mod+Ctrl+5 exec --no-startup-id ~/.i3/workspaces/ws05.sh
-#bindsym $mod+Ctrl+6 exec --no-startup-id ~/.i3/workspaces/ws06.sh
-#bindsym $mod+Ctrl+7 exec --no-startup-id ~/.i3/workspaces/ws07.sh
-bindsym $mod+Ctrl+9 exec --no-startup-id ~/.i3/workspaces/ws09.sh
-bindsym $mod+Ctrl+0 exec --no-startup-id ~/.i3/workspaces/ws00.sh
+bindsym $mod+Ctrl+1 exec --no-startup-id ~/.config/i3/workspaces/ws01.sh
+bindsym $mod+Ctrl+2 exec --no-startup-id ~/.config/i3/workspaces/ws02.sh
+bindsym $mod+Ctrl+3 exec --no-startup-id ~/.config/i3/workspaces/ws03.sh
+bindsym $mod+Ctrl+4 exec --no-startup-id ~/.config/i3/workspaces/ws04.sh
+#bindsym $mod+Ctrl+5 exec --no-startup-id ~/.config/i3/workspaces/ws05.sh
+#bindsym $mod+Ctrl+6 exec --no-startup-id ~/.config/i3/workspaces/ws06.sh
+#bindsym $mod+Ctrl+7 exec --no-startup-id ~/.config/i3/workspaces/ws07.sh
+bindsym $mod+Ctrl+9 exec --no-startup-id ~/.config/i3/workspaces/ws09.sh
+bindsym $mod+Ctrl+0 exec --no-startup-id ~/.config/i3/workspaces/ws00.sh
 
 # Open specific applications in floating mode
 for_window [class="^.*"] border pixel 0
@@ -161,6 +161,7 @@ for_window [class="Nitrogen"] floating enable sticky enable border none
 for_window [class="feh"] floating enable sticky enable border none
 for_window [class="mpv"] floating enable sticky enable border none
 for_window [class="^jetbrains-.+"][window_type=dialog] focus
+for_window [class="Arandr"] floating enable sticky enable border none
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -233,4 +234,4 @@ smart_gaps on
 smart_borders on
 
 #### Custom Config
-exec --no-startup-id /home/jfm/.i3/scripts/start_layout.sh
+exec --no-startup-id /home/jfm/.config/i3/scripts/start_layout.sh

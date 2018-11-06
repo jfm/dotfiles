@@ -2,18 +2,18 @@
 
 if [[ $(iwgetid -r) = *adazio* ]];
 then
- ~/.i3/scripts/work-monitors.sh &
- ~/.i3/scripts/work-layout.sh &
+ ~/.config/i3/scripts/work-monitors.sh &
+ ~/.config/i3/scripts/work-layout.sh &
 fi
 if [[ $(iwgetid -r) = *moerks.dk* ]];
 then
-  ~/.i3/scripts/home-monitors.sh &
+  ~/.config/i3/scripts/home-monitors.sh &
   sleep 5
-  ~/.i3/scripts/home-layout.sh &
+  ~/.config/i3/scripts/home-layout.sh &
 fi
 
 sleep 1
-. ~/.i3/env
+. ~/.config/i3/env
 
 echo $PRIMARY
 echo $SECONDARY

@@ -1,15 +1,24 @@
-
-# rofi.location: 1
-rofi.font: Source Code Pro for Powerline 10
+! rofi.eh: 1
+! rofi.line-margin: 15
+!rofi.location: 4
+!rofi.font: SanFranciscoDisplay-Regular 20
+! rofi.levenshtein-sort: true
+! rofi.sidebar-mode: true
+! rofi.auto-select: true
+rofi.fullscreen: true
+rofi.separator-style: dash
+rofi.hide-scrollbar: true
+rofi.padding: 250
+rofi.bw: 0
 rofi.lines: 10
-rofi.color-enabled: true
-rofi.bw: 5
-#rofi.color-window: #16a085, #16a085, #1e2529
-#rofi.color-normal: #16a085, #424242, #16a085
-#rofi.color-active: #16a085, #424242, #16a085
-#rofi.color-urgent: #16a085, #424242, #16a085
+rofi.line-padding: 10
+rofi.font: Source Code Pro for Powerline 15
+rofi.show-icons: true
 
-rofi.color-window: #002b36, #073642, #073642
-rofi.color-normal: #002b36, #fdf6e3, #002b36, #b58900, #002b36
-rofi.color-active: #002b36, #fdf6e3, #002b36, #b58900, #002b36
-rofi.color-urgent: #002b36, #fdf6e3, #002b36, #b58900, #002b36
+! Window		        'background''border'	  'separator'
+rofi.color-window:	#A60f2536,	#00000000,	#268bd2
+
+! State			        'bg',		    'fg',		  'altbg',	  'hlbg',		  'hlfg'
+rofi.color-normal:	#00000000,	#fdf6e3,	#00000000,	#00000000,	#268bd2
+rofi.color-active:	#00000000,	#fdf6e3,	#00000000,	#00000000,	#268bd2
+rofi.color-urgent:	#00000000,	#fdf6e3,	#00000000,	#00000000,	#268bd2

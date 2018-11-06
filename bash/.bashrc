@@ -172,7 +172,8 @@ stty -echoctl
 export M2_HOME=/home/jfm/Tools/apache-maven
 export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/
 export GIT_EDITOR=vim
-
+export EDITOR="nvr -s --remote"
+export VISUAL="nvr -s --remote"
 #Aliases
 #alias oc="/home/jfm/Tools/openshift-origin-client/oc"
 alias ocdev="oc -n onboarding-dev"

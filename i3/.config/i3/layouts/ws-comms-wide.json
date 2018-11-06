@@ -1,0 +1,125 @@
+{
+    "border": "none",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.333333333333333,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 466,
+               "width": 739,
+               "x": 0,
+               "y": 0
+            },
+            "name": "jfm@moerks:~",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Termite$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 466,
+               "width": 739,
+               "x": 0,
+               "y": 0
+            },
+            "name": "jfm@moerks:~",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Termite$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "none",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.333333333333333,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 466,
+               "width": 739,
+               "x": 0,
+               "y": 0
+            },
+            "name": "jfm@moerks:~",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Termite$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 466,
+               "width": 739,
+               "x": 0,
+               "y": 0
+            },
+            "name": "jfm@moerks:~",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Termite$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
+{
+    "border": "none",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.333333333333333,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 466,
+               "width": 739,
+               "x": 0,
+               "y": 0
+            },
+            "name": "jfm@moerks:~",
+            "percent": 1,
+            "swallows": [
+               {
+                "class": "^Termite$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+

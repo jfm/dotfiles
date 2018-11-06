@@ -1,11 +1,11 @@
 #!/bin/bash
 
-~/.i3/scripts/laptop-monitors.sh &
+~/.config/i3/scripts/laptop-monitors.sh &
 sleep 3
-~/.i3/scripts/laptop-layout.sh &
+~/.config/i3/scripts/laptop-layout.sh &
 
 sleep 1
-. ~/.i3/env
+. ~/.config/i3/env
 
 echo $PRIMARY
 echo $SECONDARY
