@@ -9,7 +9,7 @@
        "y": 0
     },
     "name": "Chrome",
-    "percent": 0.333333333333333,
+    "percent": 0.333,
     "swallows": [
        {
         "class": "^Google\\-chrome"
@@ -21,8 +21,8 @@
 {
     "border": "none",
     "floating": "auto_off",
-    "layout": "splith",
-    "percent": 0.41875,
+    "layout": "tabbed",
+    "percent": 0.666,
     "type": "con",
     "nodes": [
         {
@@ -39,42 +39,11 @@
             "percent": 0.595663265306122,
             "swallows": [
                {
-                "class": "^Termite$",
-                "title": "^vim$"
-               }
-            ],
-            "type": "con"
-        }    
-    ]
-}
-
-{
-    "border": "none",
-    "floating": "auto_off",
-    "layout": "splitv",
-    "percent": 0.247916666666667,
-    "type": "con",
-    "nodes": [
-       {
-            "border": "pixel",
-            "current_border_width": 0,
-            "floating": "auto_off",
-            "geometry": {
-               "height": 466,
-               "width": 739,
-               "x": 0,
-               "y": 0
-            },
-            "name": "Shell",
-            "percent": 0.5,
-            "swallows": [
-               {
-                "class": "^Termite$",
-                "title": "^shell$"
+                "class": "^jetbrains-idea$",
+                "instance": "^sun\\-awt\\-X11\\-XFramePeer$"
                }
             ],
             "type": "con"
         }
     ]
 }
-

@@ -160,7 +160,7 @@ for_window [class="^.*"] border pixel 0
 for_window [class="Nitrogen"] floating enable sticky enable border none
 for_window [class="feh"] floating enable sticky enable border none
 for_window [class="mpv"] floating enable sticky enable border none
-for_window [class="^jetbrains-.+"][window_type=dialog] focus
+#for_window [class="^jetbrains-.+"][window_type=dialog] focus
 for_window [class="Arandr"] floating enable sticky enable border none
 
 # reload the configuration file
@@ -174,10 +174,8 @@ bindsym $mod+l exec --no-startup-id light-locker-command -l
 
 # Autostart applications
 exec --no-startup-id compton --config /home/jfm/.config/compton/compton.conf
-#exec --no-startup-id nitrogen --restore
 exec --no-startup-id nm-applet
 exec --no-startup-id pasystray
-#exec --no-startup-id blueman-applet
 exec --no-startup-id light-locker
 
 # Color palette used for the terminal ( ~/.Xresources file )

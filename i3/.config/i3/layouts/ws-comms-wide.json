@@ -15,11 +15,12 @@
                "x": 0,
                "y": 0
             },
-            "name": "jfm@moerks:~",
+            "name": "Mail",
             "percent": 0.5,
             "swallows": [
                {
-                "class": "^Termite$"
+                "class": "^Google\\-chrome$",
+                "instance": "^mail.google.com$"
                }
             ],
             "type": "con"
@@ -34,11 +35,12 @@
                "x": 0,
                "y": 0
             },
-            "name": "jfm@moerks:~",
+            "name": "Calendar",
             "percent": 0.5,
             "swallows": [
                {
-                "class": "^Termite$"
+                "class": "^Google\\-chrome$",
+                "instance": "^calendar.google.com$"
                }
             ],
             "type": "con"
@@ -63,11 +65,12 @@
                "x": 0,
                "y": 0
             },
-            "name": "jfm@moerks:~",
+            "name": "Hangouts Chat",
             "percent": 0.5,
             "swallows": [
                {
-                "class": "^Termite$"
+                "class": "^Google\\-chrome$",
+                "instance": "^chat.google.com$"
                }
             ],
             "type": "con"
@@ -82,11 +85,12 @@
                "x": 0,
                "y": 0
             },
-            "name": "jfm@moerks:~",
+            "name": "Messages",
             "percent": 0.5,
             "swallows": [
                {
-                "class": "^Termite$"
+                "class": "^Google\\-chrome$",
+                "instance": "^messages.android.com$"
                }
             ],
             "type": "con"
@@ -111,11 +115,12 @@
                "x": 0,
                "y": 0
             },
-            "name": "jfm@moerks:~",
+            "name": "Mattermost",
             "percent": 1,
             "swallows": [
                {
-                "class": "^Termite$"
+                "class": "^Google\\-chrome$",
+                "instance": "^mattermost.yousee.dk__tdcgroup_channels_onboarding$"
                }
             ],
             "type": "con"

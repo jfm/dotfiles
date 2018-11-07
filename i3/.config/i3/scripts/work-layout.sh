@@ -7,8 +7,7 @@ export LAPTOP="eDP1"
 export PRIMARY="DP1-2"
 export SECONDARY="DP1-3"
 
-export LDPI_PROFILE="default"
-export HDPI_PROFILE="laptop"
+export LOCATION="work"
 EOM
 
 . $ENV_FILE
