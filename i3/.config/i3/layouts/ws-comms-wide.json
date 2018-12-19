@@ -70,7 +70,7 @@
             "swallows": [
                {
                 "class": "^Google\\-chrome$",
-                "instance": "^chat.google.com$"
+                "instance": "^hangouts.google.com$"
                }
             ],
             "type": "con"
@@ -115,16 +115,16 @@
                "x": 0,
                "y": 0
             },
-            "name": "Mattermost",
+            "name": "Slack",
             "percent": 1,
             "swallows": [
                {
                 "class": "^Google\\-chrome$",
-                "instance": "^mattermost.yousee.dk__tdcgroup_channels_onboarding$"
+                "instance": "^tdcgroup.slack.com__messages_C518LG04W$"
                }
             ],
             "type": "con"
         }
-    ]
+   ]
 }
 

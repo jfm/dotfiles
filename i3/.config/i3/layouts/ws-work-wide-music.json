@@ -1,0 +1,150 @@
+{
+  "border": "none",
+  "floating": "auto_off",
+  "layout": "splitv",
+  "percent": 0.3,
+  "type": "con",
+  "nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": 0,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 466,
+        "width": 739,
+        "x": 0,
+        "y": 0
+      },
+      "name": "Chrome",
+      "percent": 0.7,
+      "swallows": [
+        {
+          "class": "^Google\\-chrome$",
+          "instance": "^google\\-chrome$"
+        }
+      ],
+      "type": "con"
+    },
+    {
+      "border": "pixel",
+      "current_border_width": 0,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 466,
+        "width": 739,
+        "x": 0,
+        "y": 0
+      },
+      "name": "Shell",
+      "percent": 0.3,
+      "swallows": [
+        {
+          "class": "^Termite$",
+          "title": "^shell$"
+        }
+      ],
+      "type": "con"
+    }
+  ]
+}
+
+{
+  "border": "none",
+  "floating": "auto_off",
+  "layout": "splitv",
+  "percent": 0.4,
+  "type": "con",
+  "nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": 0,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 466,
+        "width": 739,
+        "x": 0,
+        "y": 0
+      },
+      "name": "NeoVim",
+      "percent": 0.7,
+      "swallows": [
+        {
+          "class": "^Termite$",
+          "title": "^vim$"
+        }
+      ],
+      "type": "con"
+    },
+    {
+      "border": "pixel",
+      "current_border_width": 0,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 466,
+        "width": 739,
+        "x": 0,
+        "y": 0
+      },
+      "name": "Ranger",
+      "percent": 0.3,
+      "swallows": [
+        {
+          "class": "^Termite$",
+          "title": "^ranger$"
+        }
+      ],
+      "type": "con"
+    }
+  ]
+}
+
+{
+  "border": "none",
+  "floating": "auto_off",
+  "layout": "splitv",
+  "percent": 0.3,
+  "type": "con",
+  "nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": 0,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 466,
+        "width": 739,
+        "x": 0,
+        "y": 0
+      },
+      "name": "Netflix",
+      "percent": 0.5,
+      "swallows": [
+        {
+          "class": "^Termite$",
+          "title": "^music$"
+        }
+      ],
+      "type": "con"
+    },
+    {
+      "border": "pixel",
+      "current_border_width": 0,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 466,
+        "width": 739,
+        "x": 0,
+        "y": 0
+      },
+      "name": "WeeChat",
+      "percent": 0.5,
+      "swallows": [
+        {
+          "class": "^Termite$",
+          "title": "^weechat$"
+        }
+      ],
+      "type": "con"
+    }
+  ]
+}
+

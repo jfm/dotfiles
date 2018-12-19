@@ -1,0 +1,100 @@
+{
+    "border": "none",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.65,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 0,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 466,
+               "width": 739,
+               "x": 0,
+               "y": 0
+            },
+            "name": "Newsboat",
+            "percent": 0.5,
+            "swallows": [
+               {
+                "class": "^Termite$",
+                "title": "^newsboat$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "none",
+            "floating": "auto_off",
+            "layout": "splith",
+            "percent": 0.5,
+            "type": "con",
+            "nodes": [
+                {
+                    "border": "pixel",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 466,
+                       "width": 739,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "Reddit",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                        "class": "^Termite$",
+                        "title": "^rtv$"
+                       }
+                    ],
+                    "type": "con"
+                },
+                {
+                    "border": "pixel",
+                    "current_border_width": 0,
+                    "floating": "auto_off",
+                    "geometry": {
+                       "height": 466,
+                       "width": 739,
+                       "x": 0,
+                       "y": 0
+                    },
+                    "name": "Twitter",
+                    "percent": 0.5,
+                    "swallows": [
+                       {
+                        "class": "^Termite$",
+                        "title": "^bark$"
+                       }
+                    ],
+                    "type": "con"
+                }
+            ]
+        }
+    ]
+}
+
+{
+    "border": "pixel",
+    "current_border_width": 0,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 466,
+       "width": 739,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Music",
+    "percent": 0.35,
+    "swallows": [
+       {
+        "class": "^Google Play Music Desktop Player$",
+        "instance": "^google play music desktop player$"
+       }
+    ],
+    "type": "con"
+}
+

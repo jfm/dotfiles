@@ -78,7 +78,7 @@ font-1 = FontAwesome:pixelsize=12;1
 
 modules-left = i3
 modules-center =
-modules-right = gpmdp
+modules-right = mpd gpmdp
 
 [bar/laptop]
 monitor = ${env:LAPTOP}
@@ -241,7 +241,7 @@ label = %date% %time%
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 95
+full-at = 94
 interval = 120
 
 format-charging = <animation-charging> <label-charging>
@@ -277,6 +277,12 @@ interval = 600
 type = custom/script
 exec = ~/.config/polybar/scripts/gpmdp.sh
 interval = 5
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+interval = 2
 
 [global/wm]
 margin-top = 5

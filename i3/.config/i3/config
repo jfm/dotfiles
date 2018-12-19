@@ -149,6 +149,7 @@ bindsym $mod+Ctrl+1 exec --no-startup-id ~/.config/i3/workspaces/ws01.sh
 bindsym $mod+Ctrl+2 exec --no-startup-id ~/.config/i3/workspaces/ws02.sh
 bindsym $mod+Ctrl+3 exec --no-startup-id ~/.config/i3/workspaces/ws03.sh
 bindsym $mod+Ctrl+4 exec --no-startup-id ~/.config/i3/workspaces/ws04.sh
+bindsym $mod+Shift+Ctrl+4 exec --no-startup-id ~/.config/i3/workspaces/ws04-music.sh
 #bindsym $mod+Ctrl+5 exec --no-startup-id ~/.config/i3/workspaces/ws05.sh
 #bindsym $mod+Ctrl+6 exec --no-startup-id ~/.config/i3/workspaces/ws06.sh
 #bindsym $mod+Ctrl+7 exec --no-startup-id ~/.config/i3/workspaces/ws07.sh
@@ -233,3 +234,4 @@ smart_borders on
 
 #### Custom Config
 exec --no-startup-id /home/jfm/.config/i3/scripts/start_layout.sh
+exec --no-startup-id /home/jfm/.config/i3/scripts/music.sh
