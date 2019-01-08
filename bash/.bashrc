@@ -152,16 +152,17 @@ GIT_PS1_STATESEPARATOR=" "
 #source /home/jfm/Repositories/bash-git-prompt/gitprompt.sh
 source /usr/share/git/completion/git-prompt.sh
 eval "$(pipenv --completion)"
-PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+#PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+PS1='\u@\h:\w \n\e[1;34m$(__git_ps1 "(%s)")\e[0;37m> '
 
 #Disable CapsLock
 setxkbmap -option ctrl:nocaps
 
 #Powerline
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
+#powerline-daemon -q
+#POWERLINE_BASH_CONTINUATION=1
+#POWERLINE_BASH_SELECT=1
+#. /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
 
 #Disable some CTRL for VIM commands
 bind -r '\C-s'

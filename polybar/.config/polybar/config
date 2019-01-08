@@ -17,17 +17,41 @@
 ;==========================================================
 
 [colors]
-background = #002b36
-foreground = #dfdfdf
+nord0 = #2E3440
+nord1 = #3B4252
+nord2 = #434C5E
+nord3 = #4C566A
+nord4 = #D8DEE9
+nord5 = #E5E9F0
+nord6 = #ECEFF4
+nord7 = #8FBCBB
+nord8 = #88C0D0
+nord9 = #81A1C1
+nord10 = #5E81AC
+nord11 = #BF616A
+nord12 = #D08770
+nord13 = #EBCB8B
+nord14 = #A3BE8C
+nord15 = #B48EAD
 
-primary = #ffb52a
+;background = #002b36
+background = ${colors.nord0}
+;foreground = #dfdfdf
+foreground = ${colors.nord9}
+
+;primary = #ffb52a
+primary = ${colors.nord6}
 secondary = #e60053
 alert = #bd2c40
 
-i3-focused-background = #93A1A1
-i3-unfocused-background = #002b36
-i3-visible-background = #002b36
-i3-urgent-background = #657b83
+;i3-focused-background = #93A1A1
+i3-focused-background = ${colors.nord3}
+;i3-unfocused-background = #002b36
+i3-unfocused-background = ${colors.nord0}
+;i3-visible-background = #002b36
+i3-visible-background = ${colors.nord0}
+;i3-urgent-background = #657b83
+i3-urgent-background = ${colors.nord10}
 
 [bar/primary]
 monitor = ${env:PRIMARY:eDP1}
