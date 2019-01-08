@@ -171,7 +171,7 @@ stty -echoctl
 #Paths
 export M2_HOME=/home/jfm/Tools/apache-maven
 export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/
-export GIT_EDITOR=vim
+export GIT_EDITOR=nvim
 export EDITOR="nvr -s --remote"
 export VISUAL="nvr -s --remote"
 #Aliases
@@ -185,6 +185,7 @@ alias prod="ssh -fN sochi"
 alias top="htop"
 alias ssh="TERM=xterm-256color ssh"
 alias vim="nvr -s --remote"
+alias vi="nvim"
 alias buildtool="/home/jfm/Customers/TDC/Code/Onboarding/build-tool/buildtool.sh"
 alias vpnup="nmcli con up id \"YouSee VPN\""
 alias vpndown="nmcli con down id \"YouSee VPN\""

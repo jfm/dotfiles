@@ -1,3 +1,3 @@
 #!/bin/bash
 
-nohup mopidy >/dev/null 2>&1 &
+nohup mopidy --config ~/.config/mopidy/mopidy.conf >/dev/null 2>&1 &
