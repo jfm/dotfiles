@@ -153,7 +153,7 @@ GIT_PS1_STATESEPARATOR=" "
 source /usr/share/git/completion/git-prompt.sh
 eval "$(pipenv --completion)"
 #PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-PS1='\[\e[1;32m\u@\h \e[1;34m\w\]\n\[\e[1;33m$(__git_ps1 "(%s)")\e[m\]⇨ '
+PS1='\[\e[1;32m\u@\h \e[1;34m\w\]\n\[\e[1;33m\]$(__git_ps1 "(%s) ")\[\e[m\]⇨ '
 
 #Disable CapsLock
 setxkbmap -option ctrl:nocaps
