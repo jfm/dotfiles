@@ -314,6 +314,12 @@ host = 127.0.0.1
 port = 6600
 interval = 2
 
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+
 [global/wm]
 margin-top = 5
 margin-bottom = 5

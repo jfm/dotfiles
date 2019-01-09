@@ -31,7 +31,7 @@ colorscheme nord
 "Airline
 let g:airline#extensions#tabline#enabled = 1
 let g:Powerline_symbols='unicode'
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 let g:airline_theme='nord'
 
 "YCM
