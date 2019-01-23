@@ -28,6 +28,6 @@ i3-msg "workspace 6:; move workspace to output $PRIMARY"
 i3-msg "workspace 7:; move workspace to output $PRIMARY"
 i3-msg "workspace 8:; move workspace to output $SECONDARY"
 i3-msg "workspace 9:; move workspace to output $SECONDARY"
-i3-msg "workspace 0:; move workspace to output $SECONDARY"
+i3-msg "workspace 10:; move workspace to output $SECONDARY"
 
 exit

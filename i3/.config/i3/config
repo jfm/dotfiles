@@ -162,8 +162,9 @@ for_window [class="^.*"] border pixel 0
 for_window [class="Nitrogen"] floating enable sticky enable border none
 for_window [class="feh"] floating enable sticky enable border none
 for_window [class="mpv"] floating enable sticky enable border none
-#for_window [class="^jetbrains-.+"][window_type=dialog] focus
 for_window [class="Arandr"] floating enable sticky enable border none
+#for_window [class="^jetbrains-.+"][window_type=dialog] focus
+#for_window [instance="sun-awt-X11-XWindowPeer"] border pixel 0
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

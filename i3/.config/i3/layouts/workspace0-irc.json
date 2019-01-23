@@ -1,21 +1,46 @@
 {
-    "border": "pixel",
-    "current_border_width": 1,
-    "floating": "auto_off",
-    "geometry": {
-       "height": 434,
-       "width": 738,
-       "x": 0,
-       "y": 0
+  "layout": "splith",
+  "nodes": [
+    {
+      "border": "pixel",
+      "current_border_width": 1,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 1164,
+        "width": 1918,
+        "x": 1920,
+        "y": 0
+      },
+      "name": "Slack",
+      "percent": 0.6,
+      "swallows": [
+        {
+          "class": "^Slack$"
+        }
+      ],
+      "type": "con"
     },
-    "name": "WeeChat",
-    "percent": 1,
-    "swallows": [
-       {
-        "class": "^Termite$",
-        "title": "^weechat$"
-       }
-    ],
-    "type": "con"
+    {
+      "border": "pixel",
+      "current_border_width": 1,
+      "floating": "auto_off",
+      "geometry": {
+        "height": 410,
+        "width": 654,
+        "x": 0,
+        "y": 0
+      },
+      "name": "WeeChat",
+      "percent": 0.7,
+      "swallows": [
+        {
+          "class": "^Termite$",
+          "title": "^weechat$"
+        }
+      ],
+      "type": "con"
+    }
+  ],
+  "percent": 0.5,
+  "type": "con"
 }
-

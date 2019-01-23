@@ -142,6 +142,10 @@ ex ()
 source ~/.oc_completion.sh
 source ~/.alias_completion.sh
 
+#AWS Completion
+complete -C '/usr/bin/aws_completer' aws
+source <(kubectl completion bash)
+
 #Git Config
 GIT_PROMPT_ONLY_IN_REPO=1
 GIT_PS1_SHOWUPSTREAM="auto"
@@ -149,20 +153,12 @@ GIT_PS1_SHOWDIRTYSTATE="auto"
 GIT_PS1_SHOWCOLORHINTS="auto"
 GIT_PS1_SHOWUNTRACKEDFILES="auto"
 GIT_PS1_STATESEPARATOR=" "
-#source /home/jfm/Repositories/bash-git-prompt/gitprompt.sh
 source /usr/share/git/completion/git-prompt.sh
 eval "$(pipenv --completion)"
-#PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 PS1='\[\e[1;32m\u@\h \e[1;34m\w\]\n\[\e[1;33m\]$(__git_ps1 "(%s) ")\[\e[m\]⇨ '
 
 #Disable CapsLock
 setxkbmap -option ctrl:nocaps
-
-#Powerline
-#powerline-daemon -q
-#POWERLINE_BASH_CONTINUATION=1
-#POWERLINE_BASH_SELECT=1
-#. /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
 
 #Disable some CTRL for VIM commands
 bind -r '\C-s'
@@ -171,12 +167,12 @@ stty -echoctl
 
 #Paths
 export M2_HOME=/home/jfm/Tools/apache-maven
-export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/
+export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/:/home/jfm/Tools/aws/
 export GIT_EDITOR=nvim
 export EDITOR="nvr -s --remote"
 export VISUAL="nvr -s --remote"
+
 #Aliases
-#alias oc="/home/jfm/Tools/openshift-origin-client/oc"
 alias ocdev="oc -n onboarding-dev"
 alias octst="oc -n onboarding-test"
 alias code="cd /home/jfm/Customers/TDC/Code/Onboarding"
@@ -187,8 +183,7 @@ alias top="htop"
 alias ssh="TERM=xterm-256color ssh"
 alias vim="nvr -s --remote"
 alias vi="nvim"
-alias f="/home/jfm/Repositories/fff/fff"
-alias buildtool="/home/jfm/Customers/TDC/Code/Onboarding/build-tool/buildtool.sh"
+alias buildtool="/home/jfm/.buildtool/bin/buildtool"
 alias vpnup="nmcli con up id \"YouSee VPN\""
 alias vpndown="nmcli con down id \"YouSee VPN\""
 alias music="~/.config/i3/scripts/music.sh"

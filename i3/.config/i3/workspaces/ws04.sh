@@ -4,11 +4,11 @@
 if [ $LOCATION = "home" ];
 then
   i3-msg "workspace 4:; append_layout ~/.config/i3/layouts/ws-work-wide.json"
-  i3-msg "workspace 4:; exec google-chrome-stable --no-default-browser-check --new-window"
+  i3-msg "workspace 4:; exec google-chrome-stable --proxy-pac-url=file:///home/jfm/Customers/TDC/Scripts/tdcproxy.js --no-default-browser-check --new-window"
   i3-msg "workspace 4:; exec termite -t vim -e 'nvr -s --remote' --hold"
   i3-msg "workspace 4:; exec termite -t shell"
   i3-msg "workspace 4:; exec termite -t ranger -e ~/.config/ranger/ranger.sh --hold"
-  i3-msg "workspace 4:; exec google-chrome-stable --app=http://netflix.com"
+#  i3-msg "workspace 4:; exec google-chrome-stable --app=http://netflix.com"
   i3-msg "workspace 4:; exec termite -t weechat -e weechat"
   i3-msg "workspace 4:; move workspace to output $PRIMARY"
 else

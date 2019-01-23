@@ -120,7 +120,7 @@
             "swallows": [
                {
                 "class": "^Google\\-chrome$",
-                "instance": "^tdcgroup.slack.com__messages_C518LG04W$"
+                "instance": "^tdcgroup.slack.com$"
                }
             ],
             "type": "con"
