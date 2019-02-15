@@ -90,7 +90,7 @@
       "swallows": [
         {
           "class": "^Termite$",
-          "title": "^ranger$"
+          "title": "^shell2$"
         }
       ],
       "type": "con"

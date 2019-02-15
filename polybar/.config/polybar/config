@@ -103,7 +103,7 @@ font-1 = FontAwesome:pixelsize=12;1
 
 modules-left = i3
 modules-center =
-modules-right = mpd gpmdp
+modules-right = gpmdp spotify
 
 [bar/laptop]
 monitor = ${env:LAPTOP}
@@ -309,17 +309,17 @@ type = custom/script
 exec = ~/.config/polybar/scripts/gpmdp.sh
 interval = 5
 
-[module/mpd]
-type = internal/mpd
-host = 127.0.0.1
-port = 6600
-interval = 2
-
 icon-play = ⏵
 icon-pause = ⏸
 icon-stop = ⏹
 icon-prev = ⏮
 icon-next = ⏭
+
+[module/spotify]
+type = custom/script
+interval = 1
+format = <label>
+exec = python ~/.config/polybar/scripts/spotify_status.py -p ',' -f '{play_pause} {artist} - {song}'
 
 [global/wm]
 margin-top = 5
