@@ -1,0 +1,17 @@
+set mail_check=30
+set timeout=15
+
+set imap_user=jfm@doel.dk
+set imap_pass=s89YA7vAkTXakps
+set folder=imaps://mail.unoeuro.com/
+set spoolfile=+INBOX
+
+set realname = 'Jesper Fussing Mørk'
+set from = jfm@doel.dk
+set use_from = yes
+
+set smtp_url=smtps://$imap_user:$imap_pass@asmtp.unoeuro.com
+set ssl_force_tls = yes
+
+alternative_order text/plain text/html
+auto_view text/html

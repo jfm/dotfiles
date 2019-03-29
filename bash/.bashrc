@@ -158,7 +158,7 @@ eval "$(pipenv --completion)"
 PS1='\[\e[1;32m\u@\h \e[1;34m\w\]\n\[\e[1;33m\]$(__git_ps1 "(%s) ")\[\e[m\]⇨ '
 
 #Disable CapsLock
-setxkbmap -option ctrl:nocaps
+#setxkbmap -option ctrl:nocaps
 
 #Disable some CTRL for VIM commands
 bind -r '\C-s'
@@ -166,6 +166,7 @@ stty -ixon
 stty -echoctl
 
 #Paths
+export _JAVA_AWT_WM_NONREPARENTING=1
 export M2_HOME=/home/jfm/Tools/apache-maven
 export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/:/home/jfm/Tools/aws/
 export GIT_EDITOR=nvim

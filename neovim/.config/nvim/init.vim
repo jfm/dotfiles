@@ -13,6 +13,8 @@ set autoread
 set hidden
 set background=dark
 set rtp^=/usr/share/vim/vimfiles/
+set undodir=~/.local/share/nvim/undodir
+set undofile
 
 "Plugins
 call plug#begin('~/.local/share/nvim/plugged')
@@ -20,7 +22,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Shougo/deoplete.nvim'
+Plug 'zchee/deoplete-jedi'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'vim-syntastic/syntastic'
 Plug 'luochen1990/rainbow'
 Plug 'numirias/semshi'
@@ -45,14 +49,17 @@ let g:Powerline_symbols='unicode'
 let g:airline_theme='nord'
 
 "YCM
-let mapleader = "½"
-let g:ycm_server_python_interpreter = 'python3'
-let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_min_num_of_chars_for_completion=3
-let g:ycm_add_preview_to_completeopt = 1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+"let mapleader = \"½\"
+"let g:ycm_server_python_interpreter = 'python3'
+"let g:ycm_autoclose_preview_window_after_completion=1
+"let g:ycm_min_num_of_chars_for_completion=3
+"let g:ycm_add_preview_to_completeopt = 1
+"map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
-"
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+
+" Syntastic
 let g:syntastic_python_checkers = ['python']
 
 "Rainbow Parentheses
@@ -65,6 +72,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " NerdTree
 map <M-1> :NERDTreeToggle<CR>
+map <M-2> :NERDTreeFocus<CR>
 let g:NERDTreeWinSize=40
 let NERDTreeShowBookmarks=1
 let NERDTreeMinimalUI=1

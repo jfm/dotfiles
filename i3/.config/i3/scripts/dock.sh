@@ -1,15 +1,19 @@
 #!/bin/bash
 
-if [[ $(iwgetid -r) = *adazio* ]];
+connected_displays=$(xrandr | grep -v disconnected | grep connected | wc -l)
+#echo $connected_displays
+
+if [[ $connected_displays = 3 ]];
 then
+ echo "WORK"
  ~/.config/i3/scripts/work-monitors.sh &
  ~/.config/i3/scripts/work-layout.sh &
 fi
-if [[ $(iwgetid -r) = *moerks.dk* ]];
+if [[ $connected_displays = 2 ]];
 then
   ~/.config/i3/scripts/home-monitors.sh &
-  sleep 5
   ~/.config/i3/scripts/home-layout.sh &
+ echo "HOME"
 fi
 
 sleep 1
@@ -30,4 +34,4 @@ i3-msg "workspace 8:; move workspace to output $SECONDARY"
 i3-msg "workspace 9:; move workspace to output $SECONDARY"
 i3-msg "workspace 10:; move workspace to output $SECONDARY"
 
-exit
+exit 0

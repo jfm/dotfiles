@@ -25,9 +25,9 @@
 # Feh is a simple and effective image viewer
 # Note that rtv returns a list of urls for imgur albums, so we don't put quotes
 # around the `%s`
-image/x-imgur-album; feh --scale-down --auto-zoom %s; test=test -n "$DISPLAY"
+image/x-imgur-album; curl %s | imv -; test=test -n "$DISPLAY"
 image/gif; mpv '%s' --autofit-larger 1024x768 --loop=inf; test=test -n "$DISPLAY"
-image/*; feh --scale-down --auto-zoom '%s'; test=test -n "$DISPLAY"
+image/*; curl '%s' | imv -; test=test -n "$DISPLAY"
 
 # Youtube videos are assigned a custom mime-type, which can be streamed with
 # vlc or youtube-dl.
@@ -68,3 +68,6 @@ video/*; mpv '%s' --autofit-larger 1024x768 --loop=inf; test=test -n "$DISPLAY"
 # Ascii videos
 # video/x-youtube; youtube-dl -q -o - '%s' | mplayer -cache 8192 -vo caca -quiet -; needsterminal
 # video/*; wget '%s' -O - | mplayer -cache 8192 -vo caca -quiet -; needsterminal
+#
+text/html; /usr/bin/google-chrome-stable '--app=file://%s' &> /dev/null & sleep 1; test=test -n "$DISPLAY"; nametemplate=%s.html; needsterminal
+text/html;  w3m %s; nametemplate=%s.html; copiousoutput

@@ -1,0 +1,118 @@
+@define-color nord00 #2E3440;
+@define-color nord01 #3B4252;
+@define-color nord02 #434C5E;
+@define-color nord03 #4C566A;
+@define-color nord04 #D8DEE9;
+@define-color nord05 #E5E9F0;
+@define-color nord06 #ECEFF4;
+@define-color nord07 #8FBCBB;
+@define-color nord08 #88C0D0;
+@define-color nord09 #81A1C1;
+@define-color nord10 #5E81AC;
+@define-color nord11 #BF616A;
+@define-color nord12 #D08770;
+@define-color nord13 #EBCB8B;
+@define-color nord14 #A3BE8C;
+@define-color nord15 #B48EAD;
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: 'Source Code Pro', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: @nord00;
+  border-bottom: 3px solid @nord03;
+  color: white;
+}
+
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  color: @nord04;
+  border-bottom: 3px solid transparent;
+}
+
+#workspaces button.focused {
+  background: @nord03;
+  border-bottom: 3px solid @nord14;
+}
+
+#clock, #battery  {
+  padding: 0 10px;
+  margin: 0 5px;
+}
+
+#cpu, #memory, #pulseaudio {
+  padding: 0 5px;
+  margin: 0 5px;
+}
+
+#clock {
+  border-bottom: 3px solid @nord14;
+  color: @nord04;
+}
+
+#cpu {
+  border-bottom: 3px solid @nord14;
+  color: @nord04;
+}
+
+#memory {
+  border-bottom: 3px solid @nord14;
+  color: @nord04;
+}
+
+#network {
+  border-bottom: 3px solid @nord14;
+  color: @nord04;
+}
+
+#pulseaudio {
+  border-bottom: 3px solid @nord14;
+  color: @nord04;
+}
+
+#battery {
+  border-bottom: 3px solid @nord14;
+  color: @nord04;
+}
+
+#battery.charging {
+  color: @nord04;
+  border-bottom: 3px solid @nord07;
+}
+#battery.discharging {
+  color: @nord04;
+  border-bottom: 3px solid @nord11;
+}
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: black;
+  }
+}
+
+#battery.warning:not(.charging) {
+  background: #f53c3c;
+  color: white;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#custom-spotify {
+  border-bottom: 3px solid @nord14;
+  color: @nord04;
+}
+
+#custom-arch {
+  border-bottom: 3px solid @nord11;
+  color: @nord04;
+}

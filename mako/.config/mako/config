@@ -1,0 +1,7 @@
+default-timeout=3000
+anchor=bottom-right
+
+format=%a\n%b\n%s
+border-size=0
+background-color=#5E81ACFF
+text-color=#D8DEE9FF
