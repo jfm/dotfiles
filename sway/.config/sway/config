@@ -181,5 +181,6 @@ mode $exitmenu {
 bindsym $mod+backspace mode $exitmenu
 
 #### Custom Config
+exec swayidle timeout 300 'swaylock -i ~/.config/sway/wallpapers/stars_3840x2160.jpg -s stretch' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -i ~/.config/sway/wallpapers/stars_3840x2160.jpg -s stretch'
 exec /home/jfm/.config/sway/scripts/start_layout.sh
 exec mako

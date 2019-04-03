@@ -113,31 +113,6 @@ shopt -s expand_aliases
 # Enable history appending instead of overwriting.  #139609
 shopt -s histappend
 
-#
-# # ex - archive extractor
-# # usage: ex <file>
-ex ()
-{
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xjf $1   ;;
-      *.tar.gz)    tar xzf $1   ;;
-      *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1    ;;
-      *.tar)       tar xf $1    ;;
-      *.tbz2)      tar xjf $1   ;;
-      *.tgz)       tar xzf $1   ;;
-      *.zip)       unzip $1     ;;
-      *.Z)         uncompress $1;;
-      *.7z)        7z x $1      ;;
-      *)           echo "'$1' cannot be extracted via ex()" ;;
-    esac
-  else
-    echo "'$1' is not a valid file"
-  fi
-}
-
 #Bash Completion for OC
 source ~/.oc_completion.sh
 source ~/.alias_completion.sh
@@ -157,9 +132,6 @@ source /usr/share/git/completion/git-prompt.sh
 eval "$(pipenv --completion)"
 PS1='\[\e[1;32m\u@\h \e[1;34m\w\]\n\[\e[1;33m\]$(__git_ps1 "(%s) ")\[\e[m\]⇨ '
 
-#Disable CapsLock
-#setxkbmap -option ctrl:nocaps
-
 #Disable some CTRL for VIM commands
 bind -r '\C-s'
 stty -ixon
@@ -167,26 +139,27 @@ stty -echoctl
 
 #Paths
 export _JAVA_AWT_WM_NONREPARENTING=1
+#export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export M2_HOME=/home/jfm/Tools/apache-maven
 export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/:/home/jfm/Tools/aws/
 export GIT_EDITOR=nvim
-export EDITOR="nvr -s --remote"
-export VISUAL="nvr -s --remote"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
 #Aliases
-alias ocdev="oc -n onboarding-dev"
-alias octst="oc -n onboarding-test"
 alias code="cd /home/jfm/Customers/TDC/Code/Onboarding"
 alias dotfiles="cd /home/jfm/Repositories/dotfiles"
 alias tdc="cd /home/jfm/Customers/TDC"
 alias prod="ssh -fN sochi"
+
 alias top="htop"
 alias ssh="TERM=xterm-256color ssh"
-alias rvim="nvr -s --remote"
 alias vim="nvim"
 alias vi="nvim"
+alias rtv="rtv --enable-media"
 alias k9s="/home/jfm/Tools/k9s/k9s"
 alias buildtool="/home/jfm/.buildtool/bin/buildtool"
 alias vpnup="nmcli con up id \"YouSee VPN\""
 alias vpndown="nmcli con down id \"YouSee VPN\""
-alias music="~/.config/i3/scripts/music.sh"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

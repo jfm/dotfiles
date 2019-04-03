@@ -41,13 +41,8 @@ window#waybar {
   border-bottom: 3px solid @nord14;
 }
 
-#clock, #battery  {
+#clock, #battery, #cpu, #memory, #pulseaudio, #network {
   padding: 0 10px;
-  margin: 0 5px;
-}
-
-#cpu, #memory, #pulseaudio {
-  padding: 0 5px;
   margin: 0 5px;
 }
 
@@ -110,9 +105,13 @@ window#waybar {
 #custom-spotify {
   border-bottom: 3px solid @nord14;
   color: @nord04;
+  padding: 0 10px;
+  margin: 0 5px;
 }
 
 #custom-arch {
   border-bottom: 3px solid @nord11;
   color: @nord04;
+  padding: 0 10px;
+  margin: 0 5px;
 }

@@ -3,13 +3,13 @@ set timeout=15
 set sort=threads
 
 set imap_user=jfm@doel.dk
-set imap_pass=s89YA7vAkTXakps
+set imap_pass=JXdQsjCMq76QYZG
 set folder=imaps://mail.unoeuro.com/
 set spoolfile=+INBOX
 
 set realname = 'Jesper Fussing Mørk'
 set from = jfm@doel.dk
-set use_from = yes
+set use_from = no
 
 set smtp_url=smtps://$imap_user:$imap_pass@asmtp.unoeuro.com
 set ssl_force_tls = yes
