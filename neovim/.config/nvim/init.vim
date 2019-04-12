@@ -43,6 +43,7 @@ Plug 'w0rp/ale'
 Plug 'ambv/black'
 " HTML
 Plug 'jonsmithers/vim-html-template-literals'
+Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'alvan/vim-closetag'
 call plug#end()

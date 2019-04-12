@@ -52,7 +52,7 @@ bindsym $mod+Ctrl+Mod1+9 exec "dbus-send --print-reply --dest=org.mpris.MediaPla
 bindsym $mod+Ctrl+Mod1+0 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 bindsym $mod+Ctrl+Mod1+8 exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 
-# focus_follows_mouse no
+focus_follows_mouse always
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -180,7 +180,13 @@ mode $exitmenu {
 }
 bindsym $mod+backspace mode $exitmenu
 
+set $gnome-schema org.gnome.desktop.interface
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Papirus-Dark'
+    gsettings set $gnome-schema icon-theme 'Materia-dark'
+}
+
 #### Custom Config
-exec swayidle timeout 300 'swaylock -i ~/.config/sway/wallpapers/stars_3840x2160.jpg -s stretch' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -i ~/.config/sway/wallpapers/stars_3840x2160.jpg -s stretch'
+exec swayidle timeout 300 'swaylock -i ~/.config/sway/wallpapers/stars_3840x2160.jpg -s stretch' timeout 1800 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' before-sleep 'swaylock -i ~/.config/sway/wallpapers/stars_3840x2160.jpg -s stretch'
 exec /home/jfm/.config/sway/scripts/start_layout.sh
 exec mako

@@ -1,4 +1,4 @@
-{
+[{
     "layer": "top", // Waybar at top layer
     "output": "DP-5",
     "position": "bottom", // Waybar at the bottom of your screen
@@ -11,7 +11,7 @@
     // Modules configuration
      "sway/workspaces": {
          "disable-scroll": true,
-         "all-outputs": true,
+         "all-outputs": false,
          "format": "{name}"
      },
     "sway/mode": {
@@ -76,4 +76,18 @@
         "interval": 300,
         "exec": "$HOME/.config/waybar/scripts/updates-arch-combined.sh 2> /dev/null" // Script in resources folder
     }
+},
+{
+  "layer": "top", // Waybar at top layer
+  "output": "DP-4",
+  "position": "bottom", // Waybar at the bottom of your screen
+  "modules-left": ["sway/workspaces"],
+  "modules-center": [],
+  "modules-right": [],
+  "sway/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": false,
+    "format": "{name}"
+  }
 }
+]

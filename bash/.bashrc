@@ -141,7 +141,7 @@ stty -echoctl
 export _JAVA_AWT_WM_NONREPARENTING=1
 #export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 export M2_HOME=/home/jfm/Tools/apache-maven
-export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/:/home/jfm/Tools/aws/
+export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/:/home/jfm/Tools/aws/:/home/jfm/Tools/spin/
 export GIT_EDITOR=nvim
 export EDITOR="nvim"
 export VISUAL="nvim"
@@ -157,6 +157,7 @@ alias ssh="TERM=xterm-256color ssh"
 alias vim="nvim"
 alias vi="nvim"
 alias rtv="rtv --enable-media"
+alias spin="spin -k"
 alias k9s="/home/jfm/Tools/k9s/k9s"
 alias buildtool="/home/jfm/.buildtool/bin/buildtool"
 alias vpnup="nmcli con up id \"YouSee VPN\""
