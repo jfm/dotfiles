@@ -23,7 +23,7 @@
       "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-      "format": " {usage}%"
+      "format": " {usage:3}%"
     },
     "memory": {
       "format": " {}%"
@@ -37,6 +37,7 @@
       "format": "{icon} {capacity}%",
       // "format-good": "", // An empty format will hide the module
       // "format-full": "",
+      "interval": 5,
       "format-icons": ["", "", "", "", ""]
     },
     "network": {

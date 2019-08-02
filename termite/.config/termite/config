@@ -6,7 +6,8 @@
 # License:    MIT
 
 [options]
-font = Source Code Pro for Powerline 10
+#font = Source Code Pro for Powerline 10
+font = Hack Nerd Font 10
 scrollback_lines = 10000
 size_hints = true
 

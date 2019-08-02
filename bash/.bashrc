@@ -114,8 +114,7 @@ shopt -s expand_aliases
 shopt -s histappend
 
 #Bash Completion for OC
-source ~/.oc_completion.sh
-source ~/.alias_completion.sh
+source <(/home/jfm/Tools/openshift-origin-client/oc completion bash)
 
 #AWS Completion
 complete -C '/usr/bin/aws_completer' aws
@@ -128,9 +127,21 @@ GIT_PS1_SHOWDIRTYSTATE="auto"
 GIT_PS1_SHOWCOLORHINTS="auto"
 GIT_PS1_SHOWUNTRACKEDFILES="auto"
 GIT_PS1_STATESEPARATOR=" "
+#Kubernetes Config
+KUBE_PS1_BINARY=/home/jfm/Tools/openshift-origin-client/oc
+KUBE_PS1_PREFIX=
+KUBE_PS1_SUFFIX=
+KUBE_PS1_SEPARATOR=
+function get_cluster_short() {
+  echo "$1" | cut -d / -f2 | cut -d : -f1 | cut -d - -f1
+}
+
+KUBE_PS1_CLUSTER_FUNCTION=get_cluster_short
+
 source /usr/share/git/completion/git-prompt.sh
+source ~/Repositories/GitHub/kube-ps1/kube-ps1.sh
 eval "$(pipenv --completion)"
-PS1='\[\e[1;32m\u@\h \e[1;34m\w\]\n\[\e[1;33m\]$(__git_ps1 "(%s) ")\[\e[m\]⇨ '
+PS1='\[\e[1;32m\u@\h \e[1;34m\w\]\n\[\e[1;33m\]$(__git_ps1 "(%s) ")\[\e[m\]$(kube_ps1) '
 
 #Disable some CTRL for VIM commands
 bind -r '\C-s'
@@ -158,9 +169,15 @@ alias vim="nvim"
 alias vi="nvim"
 alias rtv="rtv --enable-media"
 alias spin="spin -k"
+alias dnote="/home/jfm/Tools/dnote/dnote"
 alias k9s="/home/jfm/Tools/k9s/k9s"
+alias kubectx="/home/jfm/Repositories/GitHub/kubectx/kubectx"
 alias buildtool="/home/jfm/.buildtool/bin/buildtool"
 alias vpnup="nmcli con up id \"YouSee VPN\""
 alias vpndown="nmcli con down id \"YouSee VPN\""
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/jfm/.sdkman"
+[[ -s "/home/jfm/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jfm/.sdkman/bin/sdkman-init.sh"

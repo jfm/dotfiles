@@ -5,8 +5,9 @@ rofi.padding: 20
 rofi.bw: 0
 rofi.lines: 10
 rofi.line-padding: 5
-rofi.font: Source Code Pro for Powerline 12
+rofi.font: Hack Nerd Font 12
 rofi.show-icons: true
+rofi.location: 8
 
 ! Window		        'background''border'	  'separator'
 rofi.color-window:	#FF5E81AC,	#00000000,	#268bd2
