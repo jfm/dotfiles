@@ -1,6 +1,7 @@
 #
 # ~/.bashrc
 #
+export HISTSIZE=10000
 
 [[ $- != *i* ]] && return
 
@@ -167,14 +168,14 @@ alias top="htop"
 alias ssh="TERM=xterm-256color ssh"
 alias vim="nvim"
 alias vi="nvim"
-alias rtv="rtv --enable-media"
-alias spin="spin -k"
-alias dnote="/home/jfm/Tools/dnote/dnote"
 alias k9s="/home/jfm/Tools/k9s/k9s"
 alias kubectx="/home/jfm/Repositories/GitHub/kubectx/kubectx"
 alias buildtool="/home/jfm/.buildtool/bin/buildtool"
 alias vpnup="nmcli con up id \"YouSee VPN\""
 alias vpndown="nmcli con down id \"YouSee VPN\""
+alias k9t="k9s --context onboarding-test/master-int-liquid-tdk-dk:443/m78311"
+alias k9p="k9s --context onboarding-prod/liquid-tdk-dk:443/m78311"
+alias dtmux="tmux new \; split-window -h -p 40"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 

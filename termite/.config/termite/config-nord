@@ -1,0 +1,55 @@
+# Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+# Copyright (c) 2016-present Sven Greb <code@svengreb.de>
+
+# Project:    Nord Termite
+# Repository: https://github.com/arcticicestudio/nord-termite
+# License:    MIT
+
+[options]
+#font = Source Code Pro for Powerline 10
+font = Hack Nerd Font 10
+scrollback_lines = 10000
+size_hints = true
+
+[colors]
+cursor = #d8dee9
+cursor_foreground = #2e3440
+
+foreground = #d8dee9
+foreground_bold = #d8dee9
+background = #2e3440
+
+highlight = #4c566a
+
+color0  = #3b4252
+color1  = #bf616a
+color2  = #a3be8c
+color3  = #ebcb8b
+color4  = #81a1c1
+color5  = #b48ead
+color6  = #88c0d0
+color7  = #e5e9f0
+color8  = #4c566a
+color9  = #bf616a
+color10 = #a3be8c
+color11 = #ebcb8b
+color12 = #81a1c1
+color13 = #b48ead
+color14 = #8fbcbb
+color15 = #eceff4
+color100 = #2e3440
+color101 = #3b4252
+color102 = #434c5e
+color103 = #4c566a
+color104 = #d8dee9
+color105 = #e5e9f0
+color106 = #eceff4
+color107 = #8fBcBB
+color108 = #88c0d0
+color109 = #81a1c1
+color110 = #5e81ac
+color111 = #bf616a
+color112 = #d08770
+color113 = #ebcb8b
+color114 = #a3be8c
+color115 = #b48ead

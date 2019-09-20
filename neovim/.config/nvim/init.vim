@@ -1,6 +1,7 @@
 syntax on
 filetype indent on
 
+let base16colorspace=256
 set encoding=utf-8
 set clipboard=unnamed
 set clipboard+=unnamedplus
@@ -11,16 +12,21 @@ set expandtab
 set number
 set autoread
 set hidden
-set background=dark
+set termguicolors
+set background=light
 set rtp^=/usr/share/vim/vimfiles/
 set undodir=~/.local/share/nvim/undodir
 set undofile
 set colorcolumn=80
 set foldmethod=syntax
 set foldlevelstart=20
+set relativenumber
 
 "Plugins
 call plug#begin('~/.local/share/nvim/plugged')
+" Colorschemes
+Plug 'chriskempson/base16-vim'
+Plug 'arcticicestudio/nord-vim'
 
 " Pretty Status Lines
 Plug 'vim-airline/vim-airline'
@@ -32,10 +38,7 @@ Plug 'jlanzarotta/bufexplorer'
 " Completion
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-react-snippets'
-Plug 'neoclide/coc.nvim', {'do': './install.sh'}
-
-" Colorscheme
-Plug 'arcticicestudio/nord-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Pretty parenthesis
 Plug 'luochen1990/rainbow'
@@ -60,6 +63,8 @@ Plug 'alvan/vim-closetag'
 Plug 'janko/vim-test'
 call plug#end()
 
+
+" Colorscheme and Theming
 colorscheme nord
 
 "Airline
@@ -128,7 +133,7 @@ map <M-3> :HFiles<CR>
 :vmap r "_dP
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
-:nmap <F28> :bd<CR>
+:nmap <silent> <F28> :bd<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
