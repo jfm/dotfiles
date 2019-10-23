@@ -13,7 +13,7 @@ set number
 set autoread
 set hidden
 set termguicolors
-set background=light
+set background=dark
 set rtp^=/usr/share/vim/vimfiles/
 set undodir=~/.local/share/nvim/undodir
 set undofile
@@ -24,6 +24,7 @@ set relativenumber
 
 "Plugins
 call plug#begin('~/.local/share/nvim/plugged')
+
 " Colorschemes
 Plug 'chriskempson/base16-vim'
 Plug 'arcticicestudio/nord-vim'
@@ -61,6 +62,9 @@ Plug 'alvan/vim-closetag'
 
 " Testing
 Plug 'janko/vim-test'
+
+" Editing
+Plug 'tpope/vim-surround'
 call plug#end()
 
 
@@ -76,7 +80,7 @@ let g:airline_theme='nord'
 let g:airline_symbols.maxlinenr = ''
 
 " BufExplorer
-nnoremap <silent> <F36> :BufExplorerVerticalSplit<CR>
+nnoremap <silent> <C-F12> :BufExplorerVerticalSplit<CR>
 nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <F24> :bp<CR>
 
@@ -88,9 +92,9 @@ nmap <silent> gr <Plug>(coc-references)
 inoremap <silent><expr> <c-space> coc#refresh()
 
 " Testing
-nmap <silent> <F34> :TestNearest<CR>
+nmap <silent> <C-F10> :TestNearest<CR>
 nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> <F22> :TestFile<CR>
+nmap <silent> <S-F10> :TestFile<CR>
 nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
@@ -133,7 +137,7 @@ map <M-3> :HFiles<CR>
 :vmap r "_dP
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
-:nmap <silent> <F28> :bd<CR>
+:nmap <silent> <C-F4> :bd<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>

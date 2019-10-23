@@ -166,7 +166,6 @@ alias ssh="TERM=xterm-256color ssh"
 alias vim="nvim"
 alias vi="nvim"
 
-alias k9s="/home/jfm/Tools/k9s/k9s"
 alias kubectx="/home/jfm/Repositories/GitHub/kubectx/kubectx"
 
 alias buildtool="/home/jfm/.buildtool/bin/buildtool"
@@ -174,11 +173,11 @@ alias buildtool="/home/jfm/.buildtool/bin/buildtool"
 alias vpnup="nmcli con up id \"YouSee VPN\""
 alias vpndown="nmcli con down id \"YouSee VPN\""
 
-alias k9t="k9s --context onboarding-test/master-int-liquid-tdk-dk:443/m78311"
-alias k9p="k9s --context onboarding-prod/liquid-tdk-dk:443/m78311"
+alias k9t="k9s --context onboarding-test/master-int-liquid-tdk-dk:443/m78311 --command dp"
+alias k9p="k9s --context onboarding-prod/liquid-tdk-dk:443/m78311 --command dp"
 
-alias dtmux="tmux new \; split-window -h -p 40"
-alias ptmux="tmux new \; split-window -h -p 40 \; split-window -v -p 25"
+alias dtmux="tmux split-window -h -p 40"
+alias ptmux="tmux split-window -h -p 40 \; split-window -v -p 25"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
