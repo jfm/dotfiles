@@ -1,8 +1,8 @@
 syntax on
 filetype indent on
 
-let base16colorspace=256
 let mapleader="½"
+
 set encoding=utf-8
 set clipboard=unnamed
 set clipboard+=unnamedplus
@@ -10,7 +10,6 @@ set smartindent
 set shiftwidth=2
 set tabstop=2
 set expandtab
-set number
 set autoread
 set hidden
 set termguicolors
@@ -21,21 +20,18 @@ set undofile
 set colorcolumn=80
 set foldmethod=syntax
 set foldlevelstart=20
+set number
 set relativenumber
 
 "Plugins
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Colorschemes
-Plug 'chriskempson/base16-vim'
 Plug 'arcticicestudio/nord-vim'
 
 " Pretty Status Lines
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-" Buffers
-Plug 'jlanzarotta/bufexplorer'
 
 " Completion
 Plug 'honza/vim-snippets'
@@ -46,7 +42,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'luochen1990/rainbow'
 
 " File handling
-Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
@@ -117,25 +112,13 @@ let g:html_indent_style1 = "inc"
 " Black
 autocmd BufWritePre *.py execute ':Black'
 
-" Defx
-map <silent><M-1> :Defx -toggle -split=vertical -winwidth=40 <CR>
-autocmd FileType defx call s:defx_my_settings()
-function! s:defx_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-        \ defx#is_directory() ? defx#do_action('open') :
-        \ defx#do_action('multi', ['drop', 'quit'])
-  nnoremap <silent><buffer><expr> <BS>
-        \ defx#do_action('cd', '..')
-  nnoremap <silent><buffer><expr> <c-i>
-        \ defx#do_action('toggle_ignored_files')
-endfunction
-
 " FZF
 let $FZF_DEFAULT_COMMAND = 'ag --ignore .git --ignore-dir Customers/RP --ignore *.jar -g ""'
 command! -bang -nargs=? -complete=dir HFiles
   \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --ignore .git --ignore-dir Customers/RP --ignore *.jar -g ""'}, <bang>0)
-map <M-2> :Files<CR>
-map <M-3> :HFiles<CR>
+map <M-1> :Files<CR>
+map <M-2> :HFiles<CR>
+map <M-3> :Buffers<CR>
 
 " Mappings
 :vmap r "_dP
@@ -146,13 +129,13 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+nmap <Leader>gs :GFiles?<CR>
 nmap <Leader>gn <Plug>(GitGutterNextHunk)  " git next
 nmap <Leader>gp <Plug>(GitGutterPrevHunk)  " git previous
 nmap <Leader>ga <Plug>(GitGutterStageHunk) " git add (chunk)
 nmap <Leader>gu <Plug>(GitGutterUndoHunk)  " git undo (chunk)
 
 "AutoCommands
-au BufWinEnter * set number
 au FileType json setlocal equalprg=jq\ .
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 autocmd FileType python setlocal completeopt-=preview
