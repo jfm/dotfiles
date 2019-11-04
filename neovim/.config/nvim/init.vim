@@ -2,6 +2,7 @@ syntax on
 filetype indent on
 
 let base16colorspace=256
+let mapleader="½"
 set encoding=utf-8
 set clipboard=unnamed
 set clipboard+=unnamedplus
@@ -136,7 +137,7 @@ command! -bang -nargs=? -complete=dir HFiles
 map <M-2> :Files<CR>
 map <M-3> :HFiles<CR>
 
-"Mappings
+" Mappings
 :vmap r "_dP
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
@@ -146,6 +147,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <F9> :%!jq '.'<CR>
+nmap <Leader>gn <Plug>(GitGutterNextHunk)  " git next
+nmap <Leader>gp <Plug>(GitGutterPrevHunk)  " git previous
+nmap <Leader>ga <Plug>(GitGutterStageHunk) " git add (chunk)
+nmap <Leader>gu <Plug>(GitGutterUndoHunk)  " git undo (chunk)
 
 "AutoCommands
 au BufWinEnter * set number
