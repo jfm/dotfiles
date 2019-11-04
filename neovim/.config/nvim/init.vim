@@ -146,7 +146,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
-nnoremap <F9> :%!jq '.'<CR>
 nmap <Leader>gn <Plug>(GitGutterNextHunk)  " git next
 nmap <Leader>gp <Plug>(GitGutterPrevHunk)  " git previous
 nmap <Leader>ga <Plug>(GitGutterStageHunk) " git add (chunk)
@@ -154,5 +153,6 @@ nmap <Leader>gu <Plug>(GitGutterUndoHunk)  " git undo (chunk)
 
 "AutoCommands
 au BufWinEnter * set number
+au FileType json setlocal equalprg=jq\ .
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 autocmd FileType python setlocal completeopt-=preview
