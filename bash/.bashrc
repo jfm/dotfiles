@@ -2,6 +2,7 @@
 # ~/.bashrc
 #
 export HISTSIZE=10000
+set -o vi
 
 [[ $- != *i* ]] && return
 
@@ -158,6 +159,9 @@ export VISUAL="nvim"
 
 #Aliases
 alias code="cd /home/jfm/Customers/TDC/Code/Onboarding"
+alias ops="cd /home/jfm/Customers/TDC/Code/GitLab/ops"
+alias onboarding="cd /home/jfm/Customers/TDC/Code/GitLab/onboarding"
+alias mst="cd /home/jfm/Customers/TDC/Code/GitLab/onboarding/microservice-tools"
 alias dotfiles="cd /home/jfm/Repositories/dotfiles"
 alias tdc="cd /home/jfm/Customers/TDC"
 
@@ -175,6 +179,8 @@ alias vpndown="nmcli con down id \"YouSee VPN\""
 
 alias k9t="k9s --context onboarding-test/master-int-liquid-tdk-dk:443/m78311 --command dp"
 alias k9p="k9s --context onboarding-prod/liquid-tdk-dk:443/m78311 --command dp"
+alias k9a="k9s --context arn:aws:eks:eu-north-1:273653477426:cluster/onboarding-beta-b --command dp"
+alias awslogin="saml2aws login --idp-account nuuday_digital_dev --profile nuuday_digital_dev"
 
 alias dtmux="tmux split-window -h -p 40"
 alias ptmux="tmux split-window -h -p 40 \; split-window -v -p 25"

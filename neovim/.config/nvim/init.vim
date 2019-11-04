@@ -65,6 +65,9 @@ Plug 'janko/vim-test'
 
 " Editing
 Plug 'tpope/vim-surround'
+
+" Git
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 
