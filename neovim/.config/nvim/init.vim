@@ -120,6 +120,9 @@ map <M-1> :Files<CR>
 map <M-2> :HFiles<CR>
 map <M-3> :Buffers<CR>
 
+" GitGutter
+let g:gitgutter_terminal_reports_focus = 0
+
 " Mappings
 :vmap r "_dP
 :nmap <c-s> :w<CR>
