@@ -83,7 +83,37 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # PROMPT
-RPS1='$(vi_mode_prompt_info) '$RPS1
+autoload -U colors && colors
+
+# Remove mode switching delay.
+KEYTIMEOUT=5
+
+# Change cursor shape for different vi modes.
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]] ||
+     [[ $1 = 'block' ]]; then
+    PS1="%{$fg_bold[green]%}%n@%m%{$reset_color%} %{$fg_bold[blue]%}%d%{$reset_color%}"$'\n'"%{$bg[cyan]$fg_bold[black]%} NORMAL %{$reset_color%}  "
+    echo -ne '\e[1 q'
+
+  elif [[ ${KEYMAP} == main ]] ||
+       [[ ${KEYMAP} == viins ]] ||
+       [[ ${KEYMAP} = '' ]] ||
+       [[ $1 = 'beam' ]]; then
+    PS1="%{$fg_bold[green]%}%n@%m%{$reset_color%} %{$fg_bold[blue]%}%d%{$reset_color%}"$'\n'"%{$bg[green]$fg_bold[black]%} INSERT %{$reset_color%}  "
+    echo -ne '\e[5 q'
+  fi
+  zle reset-prompt
+}
+zle -N zle-keymap-select
+
+# Use beam shape cursor on startup.
+PS1="%{$fg_bold[green]%}%n@%m%{$reset_color%} %{$fg_bold[blue]%}%d%{$reset_color%}"$'\n'"%{$bg[green]$fg_bold[black]%} INSERT %{$reset_color%}  "
+echo -ne '\e[5 q'
+
+# Use beam shape cursor for each new prompt.
+preexec() {
+   echo -ne '\e[5 q'
+}
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
