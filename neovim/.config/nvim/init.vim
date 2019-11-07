@@ -113,9 +113,9 @@ let g:html_indent_style1 = "inc"
 autocmd BufWritePre *.py execute ':Black'
 
 " FZF
-let $FZF_DEFAULT_COMMAND = 'ag --ignore .git --ignore-dir Customers/RP --ignore *.jar -g ""'
+let $FZF_DEFAULT_COMMAND = 'ag --ignore .git -g ""'
 command! -bang -nargs=? -complete=dir HFiles
-  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --ignore .git --ignore-dir Customers/RP --ignore *.jar -g ""'}, <bang>0)
+  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --ignore .git -g ""'}, <bang>0)
 map <M-1> :Files<CR>
 map <M-2> :HFiles<CR>
 map <M-3> :Buffers<CR>

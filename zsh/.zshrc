@@ -140,7 +140,7 @@ alias vim="nvim"
 alias vi="nvim"
 
 alias kubectx="/home/jfm/Repositories/GitHub/kubectx/kubectx"
-
+alias istioctl="/home/jfm/Tools/istioctl/istio-1.3.4/bin/istioctl"
 alias buildtool="/home/jfm/.buildtool/bin/buildtool"
 
 alias vpnup="nmcli con up id \"YouSee VPN\""
