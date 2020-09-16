@@ -7,10 +7,10 @@ ZSH_THEME="gallois"
 # PLUGINS
 plugins=(
   git
-  vi-mode
   docker
   fzf
   helm
+  pipenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -41,7 +41,8 @@ function zle-keymap-select {
 zle -N zle-keymap-select
 
 # Use beam shape cursor on startup.
-PS1="%{$fg_bold[green]%}%n@%m%{$reset_color%} %{$fg_bold[blue]%}%d%{$reset_color%}"$'\n'"%{$bg[green]$fg_bold[black]%} INSERT %{$reset_color%}  "
+#PS1="%{$fg_bold[green]%}%n@%m%{$reset_color%} %{$fg_bold[blue]%}%d%{$reset_color%}"$'\n'"%{$bg[green]$fg_bold[black]%} INSERT %{$reset_color%}  "
+PS1="%{$fg_bold[green]%}%n@%m%{$reset_color%} %{$fg_bold[blue]%}%d%{$reset_color%}"$'\n'" "
 echo -ne '\e[5 q'
 
 # Use beam shape cursor for each new prompt.
@@ -60,6 +61,8 @@ export PATH=$PATH:$M2_HOME/bin:/home/jfm/Tools/openshift-origin-client/:/home/jf
 export GIT_EDITOR=nvim
 export VISUAL="nvim"
 
+# BINDS
+
 # Aliases
 alias code="cd /home/jfm/Customers/TDC/Code/Onboarding"
 alias ops="cd /home/jfm/Customers/TDC/Code/GitLab/ops"
@@ -74,16 +77,12 @@ alias vim="nvim"
 alias vi="nvim"
 
 alias kubectx="/home/jfm/Repositories/GitHub/kubectx/kubectx"
-alias istioctl="/home/jfm/Tools/istioctl/istio-1.3.4/bin/istioctl"
-alias buildtool="/home/jfm/.buildtool/bin/buildtool"
 
-alias vpnup="nmcli con up id \"YouSee VPN\""
-alias vpndown="nmcli con down id \"YouSee VPN\""
+alias vtmux="tmux split-window -d -v -p 40 && vim"
+alias dtmux="tmux split-window -d -h -p 40 && vim"
+alias ptmux="tmux split-window -d -h -p 40 \; split-window -d -t 2 -v -p 25 && vim"
+alias ftmux="tmux split-window -d -h -p 40 \; split-window -d -t 2 -v -p 25 nnn && vim"
 
-alias k9t="k9s --context onboarding-test/master-int-liquid-tdk-dk:443/m78311 --command dp"
-alias k9p="k9s --context onboarding-prod/liquid-tdk-dk:443/m78311 --command dp"
-alias k9a="k9s --context arn:aws:eks:eu-north-1:273653477426:cluster/onboarding-beta-b --command dp"
-alias awslogin="saml2aws login --idp-account nuuday_digital_dev --profile nuuday_digital_dev"
+alias brewme="cd /home/jfm/Repositories/brewme-reports && ptmux"
 
-alias dtmux="tmux split-window -h -p 40"
-alias ptmux="tmux split-window -h -p 40 \; split-window -v -p 25"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

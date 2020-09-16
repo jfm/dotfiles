@@ -18,7 +18,7 @@ set rtp^=/usr/share/vim/vimfiles/
 set undodir=~/.local/share/nvim/undodir
 set undofile
 set colorcolumn=80
-set foldmethod=syntax
+" set foldmethod=syntax
 set foldlevelstart=20
 set number
 set relativenumber
@@ -34,6 +34,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 " Completion
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'epilande/vim-react-snippets'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -42,19 +43,23 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'luochen1990/rainbow'
 
 " File handling
+Plug 'justinmk/vim-dirvish'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " Python
-Plug 'numirias/semshi'
 Plug 'w0rp/ale'
 Plug 'ambv/black'
 
 " HTML
 Plug 'jonsmithers/vim-html-template-literals'
-Plug 'mxw/vim-jsx'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'pangloss/vim-javascript'
 Plug 'alvan/vim-closetag'
+
+" Markdown
+Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' } 
 
 " Testing
 Plug 'janko/vim-test'
@@ -65,7 +70,6 @@ Plug 'tpope/vim-surround'
 " Git
 Plug 'airblade/vim-gitgutter'
 call plug#end()
-
 
 " Colorscheme and Theming
 colorscheme nord
@@ -78,11 +82,6 @@ let g:airline#extensions#tabline#enabled = 0
 let g:airline_theme='nord'
 let g:airline_symbols.maxlinenr = ''
 
-" BufExplorer
-nnoremap <silent> <C-F12> :BufExplorerVerticalSplit<CR>
-nnoremap <silent> <F12> :bn<CR>
-nnoremap <silent> <F24> :bp<CR>
-
 " CoC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -92,15 +91,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 
 " Testing
 nmap <silent> <C-F10> :TestNearest<CR>
-nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> <S-F10> :TestFile<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
-
-" Syntastic
-let g:syntastic_python_checkers = ['python']
 
 "Rainbow Parentheses
 let g:rainbow_active = 1
@@ -116,7 +107,7 @@ autocmd BufWritePre *.py execute ':Black'
 let $FZF_DEFAULT_COMMAND = 'ag --ignore .git -g ""'
 command! -bang -nargs=? -complete=dir HFiles
   \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --ignore .git -g ""'}, <bang>0)
-map <M-1> :Files<CR>
+map <M-1> <Plug>(dirvish_up)
 map <M-2> :HFiles<CR>
 map <M-3> :Buffers<CR>
 
@@ -137,6 +128,7 @@ nmap <Leader>gn <Plug>(GitGutterNextHunk)  " git next
 nmap <Leader>gp <Plug>(GitGutterPrevHunk)  " git previous
 nmap <Leader>ga <Plug>(GitGutterStageHunk) " git add (chunk)
 nmap <Leader>gu <Plug>(GitGutterUndoHunk)  " git undo (chunk)
+nmap <M-p> <Plug>MarkdownPreview
 
 "AutoCommands
 au FileType json setlocal equalprg=jq\ .

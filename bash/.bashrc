@@ -182,6 +182,7 @@ alias k9p="k9s --context onboarding-prod/liquid-tdk-dk:443/m78311 --command dp"
 alias k9a="k9s --context arn:aws:eks:eu-north-1:273653477426:cluster/onboarding-beta-b --command dp"
 alias awslogin="saml2aws login --idp-account nuuday_digital_dev --profile nuuday_digital_dev"
 
+alias vtmux="tmux split-window -v -p 40"
 alias dtmux="tmux split-window -h -p 40"
 alias ptmux="tmux split-window -h -p 40 \; split-window -v -p 25"
 
