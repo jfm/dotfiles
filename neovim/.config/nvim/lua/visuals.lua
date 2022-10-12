@@ -1,10 +1,10 @@
 vim.opt.termguicolors = true
-vim.cmd[[colorscheme nord]]
+vim.cmd[[colorscheme iceberg]]
 
 require('lualine').setup {
   options = {
-    icons_enabled = false,
-    theme = 'nord',
+    icons_enabled = true,
+    theme = 'iceberg_dark',
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
@@ -22,9 +22,9 @@ require('lualine').setup {
   },
   sections = {
     lualine_a = {'mode'},
-    lualine_b = {'branch', 'diff', 'diagnostics'},
+    lualine_b = {'branch', 'diff', 'diagnostics', require('github-notifications').statusline_notification_count},
     lualine_c = {'filename'},
-    lualine_x = {'encoding', 'filetype'},
+    lualine_x = {'encoding', 'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
   },
@@ -41,3 +41,4 @@ require('lualine').setup {
   inactive_winbar = {},
   extensions = {}
 }
+require('telescope').load_extension('ghn')
