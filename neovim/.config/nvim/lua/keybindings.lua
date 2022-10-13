@@ -81,11 +81,22 @@ vim.keymap.set('n', '<C-K>', '<C-W><C-K>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-L>', '<C-W><C-L>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-H>', '<C-W><C-H>', { noremap = true, silent = true })
 
-vim.keymap.set("n", "<F12>", "<cmd>TroubleToggle document_diagnostics<cr>",
+vim.keymap.set("n", "<F5>", "<cmd>TroubleToggle document_diagnostics<cr>",
   {silent = true, noremap = true}
 )
 
-vim.keymap.set('n', '<F5>', "<cmd>lua require('github-notifications.menu').notifications()<CR>", { noremap = true, silent = true })
+
+--TERMINAL BINDINGS
+vim.api.nvim_set_keymap('n', '<F12>', "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F36>', "<cmd>ToggleTermToggleAll<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<F36>', "<cmd>ToggleTermToggleAll<CR>", { noremap = true, silent = true })
+vim.keymap.set('t', '<ESC>', "<C-\\><C-n>",
+    { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap('t', '<C-H>', "<cmd>wincmd h<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<C-J>', "<cmd>wincmd j<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<C-K>', "<cmd>wincmd k<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<C-L>', "<cmd>wincmd l<CR>", { noremap = true, silent = true })
 
 -- WHICH KEY
 local wk = require("which-key")

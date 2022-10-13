@@ -20,15 +20,7 @@ return require('packer').startup(function(use)
     	}
   	end
   }
-	use {
-  	'rlch/github-notifications.nvim',
-  	config = [[require('config.github-notifications')]],
-  	requires = {
-    	'nvim-lua/plenary.nvim',
-    	'nvim-telescope/telescope.nvim',
-  	},
-	}
-	
+
   -- Handling
 	use {
   	'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -48,6 +40,15 @@ return require('packer').startup(function(use)
       -- refer to the configuration section below
     	}
   	end
+	}
+	use {
+		"akinsho/toggleterm.nvim", 
+		config = function()
+  		require("toggleterm").setup{
+				size = 20,
+				direction = 'vertical',
+			}
+		end
 	}
 
   -- Completion
