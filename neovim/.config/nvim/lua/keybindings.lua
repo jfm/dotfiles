@@ -89,7 +89,7 @@ vim.keymap.set("n", "<F5>", "<cmd>TroubleToggle document_diagnostics<cr>",
 --TERMINAL BINDINGS
 vim.api.nvim_set_keymap('n', '<F12>', "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<F36>', "<cmd>ToggleTermToggleAll<CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap('t', '<F36>', "<cmd>ToggleTermToggleAll<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('t', '<F12>', "<cmd>ToggleTermToggleAll<CR>", { noremap = true, silent = true })
 vim.keymap.set('t', '<ESC>', "<C-\\><C-n>",
     { noremap = true, silent = true }
 )
