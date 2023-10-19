@@ -23,7 +23,7 @@ return require('packer').startup(function(use)
 
   -- Handling
 	use {
-  	'nvim-telescope/telescope.nvim', tag = '0.1.0',
+  	'nvim-telescope/telescope.nvim', tag = '0.1.1',
   	requires = { {'nvim-lua/plenary.nvim'} }
 	}
 	use 'ggandor/leap.nvim'
@@ -41,33 +41,15 @@ return require('packer').startup(function(use)
     	}
   	end
 	}
-	use {
-		"akinsho/toggleterm.nvim", 
-		config = function()
-  		require("toggleterm").setup{
-				size = 20,
-				direction = 'vertical',
-			}
-		end
-	}
+	use 'akinsho/toggleterm.nvim' 
 
   -- Completion
   use 'github/copilot.vim'
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
-  use {
-    "zbirenbaum/copilot.lua",
-    event = {"VimEnter"},
-    config = function()
-      vim.defer_fn(function()
-	      require("copilot").setup()
-      end, 100)
-    end,
-  }
-  use {
-    "zbirenbaum/copilot-cmp",
-    module = "copilot_cmp",
-  }
+	use 'saadparwaiz1/cmp_luasnip'
+	use 'zbirenbaum/copilot.lua'
+  use 'zbirenbaum/copilot-cmp'
   use 'hrsh7th/cmp-nvim-lsp'
 
   -- Development
@@ -76,6 +58,10 @@ return require('packer').startup(function(use)
 	use 'mfussenegger/nvim-dap-python'
 	use 'rcarriga/nvim-dap-ui'
 	use 'theHamsta/nvim-dap-virtual-text'
+	use {
+		'rest-nvim/rest.nvim',
+		requires = {'nvim-lua/plenary.nvim'}
+	}
   use {
     "nvim-neotest/neotest",
     requires = {
@@ -89,8 +75,5 @@ return require('packer').startup(function(use)
 	use({
 	 	"andythigpen/nvim-coverage",
  		requires = "nvim-lua/plenary.nvim",
---		config = function()
---    	require("user.coverage")
---  	end,
 	})
 end)

@@ -1,9 +1,9 @@
 require('plugins')
 require('visuals')
 require('handling')
-require('completion')
 require('development')
 require('keybindings')
+require('completion')
 
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

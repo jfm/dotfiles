@@ -13,7 +13,7 @@ vim.api.nvim_set_keymap('n', '<M-2>',
 
 --TESTING
 vim.api.nvim_set_keymap('n', '<F10>',
-    "<cmd>lua require('neotest').output.open()<CR>",
+    "<cmd>lua require('neotest').output.open({enter=true, auto_close=true})<CR>",
     { noremap = true, silent = true }
 )
 vim.api.nvim_set_keymap('n', '<F58>',
@@ -44,6 +44,11 @@ vim.api.nvim_set_keymap('n', '<F35>',
     "<cmd>lua require('coverage').toggle()<CR>",
 		{ noremap = true, silent = true }
 )
+vim.api.nvim_set_keymap('n', '<F28>',
+    "<Plug>RestNvim<CR>",
+		{ noremap = true, silent = true }
+)
+
 
 
 --DEBUGGING
@@ -55,7 +60,7 @@ vim.api.nvim_set_keymap('n', '<F57>',
     "<cmd>lua require('dapui').toggle()<CR>",
     { noremap = true, silent = true }
 )
-vim.api.nvim_set_keymap('n', '<F45>',
+vim.api.nvim_set_keymap('n', '<F44>',
     "<cmd>lua require('dap').continue()<CR>",
     { noremap = true, silent = true }
 )
@@ -87,7 +92,7 @@ vim.keymap.set("n", "<F5>", "<cmd>TroubleToggle document_diagnostics<cr>",
 
 
 --TERMINAL BINDINGS
-vim.api.nvim_set_keymap('n', '<F12>', "<cmd>ToggleTerm<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<F12>', "<cmd>ToggleTerm size=60<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<F36>', "<cmd>ToggleTermToggleAll<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('t', '<F12>', "<cmd>ToggleTermToggleAll<CR>", { noremap = true, silent = true })
 vim.keymap.set('t', '<ESC>', "<C-\\><C-n>",
@@ -101,6 +106,10 @@ vim.api.nvim_set_keymap('t', '<C-L>', "<cmd>wincmd l<CR>", { noremap = true, sil
 -- WHICH KEY
 local wk = require("which-key")
 wk.register({
+		b = {
+				name = "+Buffer",
+				c = { "<cmd>w | %bd | e#<cr>", "Close All But this Buffer"	}
+		},
     g = {
         name = "+Git",
         h = {
